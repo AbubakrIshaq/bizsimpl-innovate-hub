@@ -2,6 +2,25 @@
 import React, { useEffect, useRef } from 'react';
 import { CustomButton } from '../ui/CustomButton';
 import { ArrowRight } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
+
+const companyLogos = [
+  { name: 'Google', logo: '/logos/google.svg' },
+  { name: 'Microsoft', logo: '/logos/microsoft.svg' },
+  { name: 'Amazon', logo: '/logos/amazon.svg' },
+  { name: 'Apple', logo: '/logos/apple.svg' },
+  { name: 'Facebook', logo: '/logos/facebook.svg' },
+  { name: 'Netflix', logo: '/logos/netflix.svg' },
+  { name: 'Uber', logo: '/logos/uber.svg' },
+  { name: 'Airbnb', logo: '/logos/airbnb.svg' },
+  { name: 'Slack', logo: '/logos/slack.svg' },
+  { name: 'Dropbox', logo: '/logos/dropbox.svg' },
+  { name: 'Twitter', logo: '/logos/twitter.svg' },
+  { name: 'LinkedIn', logo: '/logos/linkedin.svg' },
+  { name: 'Spotify', logo: '/logos/spotify.svg' },
+  { name: 'Adobe', logo: '/logos/adobe.svg' },
+  { name: 'Salesforce', logo: '/logos/salesforce.svg' }
+];
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -60,10 +79,27 @@ const Hero = () => {
           
           <div className="reveal reveal-up">
             <p className="text-sm text-gray-500 mb-3">Trusted by innovative businesses</p>
-            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-              {[1, 2, 3, 4, 5].map((item) => (
-                <div key={item} className="h-7 w-24 bg-gray-200/50 rounded animate-pulse"></div>
-              ))}
+            <div className="w-full overflow-hidden">
+              <Carousel 
+                opts={{ 
+                  align: "start", 
+                  loop: true,
+                  dragFree: true
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="py-4">
+                  {companyLogos.map((company, index) => (
+                    <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6">
+                      <div className="flex items-center justify-center h-10 mx-auto">
+                        <div className="h-6 w-24 bg-gray-200/70 rounded flex items-center justify-center text-xs text-gray-500 font-medium">
+                          {company.name}
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
             </div>
           </div>
         </div>
