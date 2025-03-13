@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 7 43% 40%;
 
-    --primary: a 7 43% 49%;      /* Based on #B85042 */
+    --primary: 7 43% 49%;      /* Based on #B85042 - Fixed the typo from "a 7 43% 49%" */
     --primary-foreground: 60 18% 95%;
 
     --secondary: 60 18% 86%;     /* Based on #E7E8D1 */
@@ -61,7 +61,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-theme bg-clip-text text-transparent;
+    @apply bg-primary bg-clip-text text-transparent;
   }
   
   .section-padding {

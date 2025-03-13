@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -141,6 +142,7 @@ export default {
 				'gradient-subtle': 'linear-gradient(to right, #f9f9f9, #ffffff)',
 				'gradient-blue': 'linear-gradient(90deg, #dceeff 0%, #f0f7ff 100%)',
 				'gradient-blue-dark': 'linear-gradient(90deg, #3b8eff 0%, #1a41d1 100%)',
+				'gradient-rust': 'linear-gradient(90deg, #B85042 0%, #d46e60 100%)',
 			},
 		}
 	},
