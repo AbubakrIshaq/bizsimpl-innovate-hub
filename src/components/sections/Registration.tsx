@@ -1,116 +1,136 @@
 
-import React, { useEffect, useRef } from 'react';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import React from 'react';
 import { CustomButton } from '../ui/CustomButton';
 import { CustomCard } from '../ui/CustomCard';
 
 const Registration = () => {
-  const regRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    
-    const elements = regRef.current?.querySelectorAll('.reveal');
-    elements?.forEach((el) => observer.observe(el));
-    
-    return () => elements?.forEach((el) => observer.unobserve(el));
-  }, []);
-
-  const steps = [
-    {
-      number: '01',
-      title: 'Choose your business structure',
-      description: 'Select the right business structure from Private Limited, LLP, OPC, or Partnership Firm based on your needs.'
-    },
-    {
-      number: '02',
-      title: 'Complete digital KYC',
-      description: 'Verify your identity quickly with our secure digital KYC process — no physical paperwork needed.'
-    },
-    {
-      number: '03',
-      title: 'Submit required documents',
-      description: 'Upload all necessary documents directly through our platform. Our experts will review for accuracy.'
-    },
-    {
-      number: '04',
-      title: 'Get your registration certificate',
-      description: 'Receive your digital registration certificate and start your business operations right away.'
-    }
-  ];
-
-  const benefits = [
-    'End-to-end digital process',
-    'Zero paperwork required',
-    'Transparent pricing',
-    'Expert assistance throughout',
-    'Complimentary compliance alerts',
-    'Secure document storage'
-  ];
-
   return (
-    <section ref={regRef} className="py-20 bg-gradient-blue" id="registration">
+    <section id="registration" className="py-20 bg-[#0F1A43] text-white">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="reveal reveal-left inline-block px-3 py-1 mb-4 text-sm font-medium text-bizsimpl-700 bg-white rounded-full">
-              Hassle-free Process
-            </span>
-            
-            <h2 className="reveal reveal-left text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Company Registrations, <br />
-              <span className="text-gradient">simplified</span>
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="text-white">Hassle-free </span>
+              <span className="text-[#FF6B4A]">Company Registrations</span>
             </h2>
-            
-            <p className="reveal reveal-left text-lg text-gray-700 mb-8">
-              Register your company in days, not weeks. Our streamlined process eliminates paperwork, reduces costs, and accelerates your business journey.
+            <p className="text-xl text-white/80">
+              Choose from the most popular company types and get seamless registration at No Hidden Charges
             </p>
-            
-            <div className="reveal reveal-left space-y-4 mb-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-bizsimpl-600 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">{benefit}</p>
+          </div>
+
+          {/* CTA Button for Small Screens */}
+          <div className="flex justify-center mb-12 lg:hidden">
+            <CustomButton 
+              className="bg-[#316EFF] hover:bg-[#2156D1] text-white px-8 py-4 rounded-lg text-lg"
+            >
+              Register your Business
+            </CustomButton>
+          </div>
+
+          {/* Company Types Grid */}
+          <div className="space-y-10">
+            {/* Private Limited Company */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+              <div className="lg:col-span-3">
+                <div className="bg-[#142156] p-4 rounded-xl border border-[#1F2E68] w-full max-w-[280px] mx-auto">
+                  <img 
+                    src="/lovable-uploads/4d5c8007-13e5-4050-b52e-f49d3b648caf.png" 
+                    alt="Private Limited Company" 
+                    className="w-full h-auto"
+                  />
                 </div>
-              ))}
+              </div>
+              <div className="lg:col-span-4">
+                <h3 className="text-3xl font-bold mb-2">
+                  Private Limited <br />Company
+                </h3>
+              </div>
+              <div className="lg:col-span-3">
+                <p className="text-white/80">
+                  Suitable for startups and small businesses seeking limited liability with an option to raise funds and offer ESOPs in the future.
+                </p>
+              </div>
+              <div className="lg:col-span-2 flex justify-center lg:justify-end">
+                <CustomButton 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white/10 whitespace-nowrap"
+                >
+                  Learn More
+                </CustomButton>
+              </div>
             </div>
-            
-            <div className="reveal reveal-left">
-              <CustomButton size="lg">
-                Start Registration <ArrowRight size={16} className="ml-2" />
-              </CustomButton>
+
+            {/* Limited Liability Partnership */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+              <div className="lg:col-span-3">
+                <div className="bg-[#142156] p-4 rounded-xl border border-[#1F2E68] w-full max-w-[280px] mx-auto">
+                  <img 
+                    src="/lovable-uploads/21291dda-bdff-4eb0-8724-4dbd27ea553f.png" 
+                    alt="Limited Liability Partnership" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+              <div className="lg:col-span-4">
+                <h3 className="text-3xl font-bold mb-2">
+                  Limited Liability <br />Partnership
+                </h3>
+              </div>
+              <div className="lg:col-span-3">
+                <p className="text-white/80">
+                  Suitable for professional services seeking limited liability but fewer post-incorporation compliances.
+                </p>
+              </div>
+              <div className="lg:col-span-2 flex justify-center lg:justify-end">
+                <CustomButton 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white/10 whitespace-nowrap"
+                >
+                  Learn More
+                </CustomButton>
+              </div>
+            </div>
+
+            {/* One Person Company */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+              <div className="lg:col-span-3">
+                <div className="bg-[#142156] p-4 rounded-xl border border-[#1F2E68] w-full max-w-[280px] mx-auto">
+                  <img 
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=360&h=360&crop=entropy" 
+                    alt="One Person Company" 
+                    className="w-full h-auto rounded-md"
+                  />
+                </div>
+              </div>
+              <div className="lg:col-span-4">
+                <h3 className="text-3xl font-bold mb-2">
+                  One Person <br />Company
+                </h3>
+              </div>
+              <div className="lg:col-span-3">
+                <p className="text-white/80">
+                  Suitable for franchises and small businesses seeking limited liability with single ownership.
+                </p>
+              </div>
+              <div className="lg:col-span-2 flex justify-center lg:justify-end">
+                <CustomButton 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white/10 whitespace-nowrap"
+                >
+                  Learn More
+                </CustomButton>
+              </div>
             </div>
           </div>
-          
-          <div className="space-y-6">
-            {steps.map((step, index) => (
-              <div 
-                key={index} 
-                className="reveal reveal-right"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <CustomCard variant="glass" className="flex">
-                  <div className="mr-4 flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-bizsimpl-100 text-bizsimpl-700 flex items-center justify-center font-bold">
-                      {step.number}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
-                  </div>
-                </CustomCard>
-              </div>
-            ))}
+
+          {/* CTA Button for Large Screens */}
+          <div className="hidden lg:flex justify-end mt-12">
+            <CustomButton 
+              className="bg-[#316EFF] hover:bg-[#2156D1] text-white px-8 py-3 rounded-lg text-lg"
+            >
+              Register your Business
+            </CustomButton>
           </div>
         </div>
       </div>

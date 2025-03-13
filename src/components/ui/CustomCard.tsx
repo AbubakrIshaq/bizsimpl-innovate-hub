@@ -3,7 +3,7 @@ import React from 'react';
 import { cn } from "@/lib/utils";
 
 interface CustomCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'default' | 'outlined' | 'glass' | 'elevated';
+  variant?: 'default' | 'outlined' | 'glass' | 'elevated' | 'dark';
   isHoverable?: boolean;
   padding?: 'none' | 'sm' | 'md' | 'lg';
 }
@@ -16,7 +16,8 @@ const CustomCard = React.forwardRef<HTMLDivElement, CustomCardProps>(
       default: "bg-white",
       outlined: "bg-white border border-gray-100",
       glass: "glass",
-      elevated: "bg-white shadow-soft"
+      elevated: "bg-white shadow-soft",
+      dark: "bg-[#142156] border border-[#1F2E68]"
     };
     
     const paddings = {
