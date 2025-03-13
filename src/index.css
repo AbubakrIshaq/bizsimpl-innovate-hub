@@ -69,7 +69,7 @@
   }
 
   .bg-registration {
-    @apply bg-primary;
+    @apply bg-gradient-cobalt;
   }
 }
 

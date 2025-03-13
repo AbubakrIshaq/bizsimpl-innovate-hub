@@ -5,14 +5,14 @@ import { CustomCard } from '../ui/CustomCard';
 
 const Registration = () => {
   return (
-    <section id="registration" className="py-20 bg-[#0F1A43] text-white">
+    <section id="registration" className="py-20 bg-gradient-cobalt text-white">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="text-white">Hassle-free </span>
-              <span className="text-[#FF6B4A]">Company Registrations</span>
+              <span className="text-yellow-200">Company Registrations</span>
             </h2>
             <p className="text-xl text-white/80">
               Choose from the most popular company types and get seamless registration at No Hidden Charges
@@ -22,7 +22,7 @@ const Registration = () => {
           {/* CTA Button for Small Screens */}
           <div className="flex justify-center mb-12 lg:hidden">
             <CustomButton 
-              className="bg-[#316EFF] hover:bg-[#2156D1] text-white px-8 py-4 rounded-lg text-lg"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-lg"
             >
               Register your Business
             </CustomButton>
@@ -33,7 +33,7 @@ const Registration = () => {
             {/* Private Limited Company */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-3">
-                <div className="bg-[#142156] p-4 rounded-xl border border-[#1F2E68] w-full max-w-[280px] mx-auto">
+                <div className="bg-primary/20 p-4 rounded-xl border border-primary/30 w-full max-w-[280px] mx-auto">
                   <img 
                     src="/lovable-uploads/4d5c8007-13e5-4050-b52e-f49d3b648caf.png" 
                     alt="Private Limited Company" 
@@ -64,7 +64,7 @@ const Registration = () => {
             {/* Limited Liability Partnership */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-3">
-                <div className="bg-[#142156] p-4 rounded-xl border border-[#1F2E68] w-full max-w-[280px] mx-auto">
+                <div className="bg-primary/20 p-4 rounded-xl border border-primary/30 w-full max-w-[280px] mx-auto">
                   <img 
                     src="/lovable-uploads/21291dda-bdff-4eb0-8724-4dbd27ea553f.png" 
                     alt="Limited Liability Partnership" 
@@ -95,7 +95,7 @@ const Registration = () => {
             {/* One Person Company */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-3">
-                <div className="bg-[#142156] p-4 rounded-xl border border-[#1F2E68] w-full max-w-[280px] mx-auto">
+                <div className="bg-primary/20 p-4 rounded-xl border border-primary/30 w-full max-w-[280px] mx-auto">
                   <img 
                     src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=360&h=360&crop=entropy" 
                     alt="One Person Company" 
@@ -127,7 +127,7 @@ const Registration = () => {
           {/* CTA Button for Large Screens */}
           <div className="hidden lg:flex justify-end mt-12">
             <CustomButton 
-              className="bg-[#316EFF] hover:bg-[#2156D1] text-white px-8 py-3 rounded-lg text-lg"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg text-lg"
             >
               Register your Business
             </CustomButton>
