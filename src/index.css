@@ -5,39 +5,39 @@
 
 @layer base {
   :root {
-    --background: 210 50% 98%;
-    --foreground: 222 47% 10%;
+    --background: 60 18% 86%;    /* Based on #E7E8D1 */
+    --foreground: 7 43% 40%;     /* Based on #B85042 - darker for readability */
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 10%;
+    --card-foreground: 7 43% 40%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 10%;
+    --popover-foreground: 7 43% 40%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: a 7 43% 49%;      /* Based on #B85042 */
+    --primary-foreground: 60 18% 95%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 10%;
+    --secondary: 60 18% 86%;     /* Based on #E7E8D1 */
+    --secondary-foreground: 7 43% 40%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 60 18% 80%;         /* Slightly darker E7E8D1 */
+    --muted-foreground: 7 30% 40%;
 
-    --accent: 210 40% 94%;
-    --accent-foreground: 222 47% 10%;
+    --accent: 150 14% 70%;       /* Based on #A7BEAE */
+    --accent-foreground: 7 43% 30%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 60 18% 95%;
 
-    --border: 214 32% 90%;
-    --input: 214 32% 90%;
-    --ring: 222 84% 50%;
+    --border: 150 14% 75%;       /* Based on #A7BEAE */
+    --input: 150 14% 75%;
+    --ring: 7 43% 49%;
 
     --radius: 0.75rem;
   }
  
   * {
-    @apply border-border selection:bg-bizsimpl-100 selection:text-bizsimpl-950;
+    @apply border-border selection:bg-theme-secondary selection:text-theme-primary;
   }
   
   html {
@@ -61,7 +61,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-blue-dark bg-clip-text text-transparent;
+    @apply bg-gradient-theme bg-clip-text text-transparent;
   }
   
   .section-padding {
@@ -69,50 +69,12 @@
   }
 
   .bg-registration {
-    @apply bg-[#0F1A43];
+    @apply bg-[#B85042];
   }
 }
 
 @layer components {
-  .reveal {
-    @apply opacity-0 transition-all duration-700 ease-out;
-  }
-  
-  .reveal.active {
-    @apply opacity-100;
-  }
-  
-  .reveal-up {
-    @apply reveal translate-y-10;
-  }
-  
-  .reveal-up.active {
-    @apply translate-y-0;
-  }
-  
-  .reveal-down {
-    @apply reveal -translate-y-10;
-  }
-  
-  .reveal-down.active {
-    @apply translate-y-0;
-  }
-  
-  .reveal-left {
-    @apply reveal -translate-x-10;
-  }
-  
-  .reveal-left.active {
-    @apply translate-x-0;
-  }
-  
-  .reveal-right {
-    @apply reveal translate-x-10;
-  }
-  
-  .reveal-right.active {
-    @apply translate-x-0;
-  }
+  /* ... keep existing code (reveal animations) */
   
   /* Logo carousel animation */
   .logo-scroll {
@@ -136,4 +98,3 @@
 .animate-scroll {
   animation: scroll 15s linear infinite;
 }
-

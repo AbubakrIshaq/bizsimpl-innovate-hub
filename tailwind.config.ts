@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -66,6 +65,12 @@ export default {
 					900: '#1c3aa6',
 					950: '#172554',
 				},
+				// New color theme
+				theme: {
+					primary: '#B85042',    // Rust red
+					secondary: '#E7E8D1',  // Light beige
+					tertiary: '#A7BEAE',   // Sage green
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
