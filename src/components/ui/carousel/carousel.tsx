@@ -87,14 +87,14 @@ const Carousel = React.forwardRef<
         return
       }
       
-      // Auto-scroll carousel
+      // Auto-scroll carousel with faster speed (1500ms instead of 3000ms)
       const autoplay = setInterval(() => {
         if (!api.canScrollNext()) {
           api.scrollTo(0)
         } else {
           api.scrollNext()
         }
-      }, 3000)
+      }, 1500)
 
       onSelect(api)
       api.on("reInit", onSelect)
