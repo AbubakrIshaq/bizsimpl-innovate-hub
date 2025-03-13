@@ -11,14 +11,14 @@ interface CustomButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement
 
 const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
   ({ className, children, variant = 'default', size = 'md', isLoading, icon, ...props }, ref) => {
-    const baseStyles = "inline-flex items-center justify-center rounded-lg font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bizsimpl-500 disabled:pointer-events-none disabled:opacity-50";
+    const baseStyles = "inline-flex items-center justify-center rounded-lg font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50";
     
     const variants = {
-      default: "bg-bizsimpl-600 text-white hover:bg-bizsimpl-700 active:scale-[0.98] shadow-sm",
-      outline: "border border-bizsimpl-200 hover:bg-bizsimpl-50 text-bizsimpl-700",
-      subtle: "bg-bizsimpl-100 text-bizsimpl-800 hover:bg-bizsimpl-200",
-      ghost: "text-bizsimpl-700 hover:bg-bizsimpl-50",
-      link: "text-bizsimpl-600 underline-offset-4 hover:underline"
+      default: "bg-primary text-white hover:bg-primary/90 active:scale-[0.98] shadow-sm",
+      outline: "border border-primary/20 hover:bg-primary/10 text-primary",
+      subtle: "bg-secondary/20 text-secondary hover:bg-secondary/30",
+      ghost: "text-primary hover:bg-primary/10",
+      link: "text-secondary underline-offset-4 hover:underline"
     };
     
     const sizes = {

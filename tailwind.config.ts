@@ -68,9 +68,9 @@ export default {
 				},
 				// New color theme
 				theme: {
-					primary: '#B85042',    // Rust red
-					secondary: '#E7E8D1',  // Light beige
-					tertiary: '#A7BEAE',   // Sage green
+					primary: '#1A2C56',    // Navy blue
+					secondary: '#0EA5E9',  // Cobalt blue
+					tertiary: '#FFFFFF',   // White
 				}
 			},
 			borderRadius: {
@@ -143,6 +143,8 @@ export default {
 				'gradient-blue': 'linear-gradient(90deg, #dceeff 0%, #f0f7ff 100%)',
 				'gradient-blue-dark': 'linear-gradient(90deg, #3b8eff 0%, #1a41d1 100%)',
 				'gradient-rust': 'linear-gradient(90deg, #B85042 0%, #d46e60 100%)',
+				'gradient-navy': 'linear-gradient(90deg, #1A2C56 0%, #2d4272 100%)',
+				'gradient-cobalt': 'linear-gradient(90deg, #0EA5E9 0%, #38bdf8 100%)',
 			},
 		}
 	},
