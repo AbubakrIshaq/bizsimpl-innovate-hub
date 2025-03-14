@@ -114,7 +114,7 @@ const OnePersonCompany = () => {
                 },
                 {
                   q: 'What is the nominee requirement in an OPC?',
-                  a: 'An OPC requires the sole member to nominate a person who would become the member of the company in the event of the subscriber's death or inability to contract.'
+                  a: 'An OPC requires the sole member to nominate a person who would become the member of the company in the event of the subscriber\'s death or inability to contract.'
                 },
                 {
                   q: 'Can an OPC be converted to a Private Limited Company?',
