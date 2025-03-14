@@ -1,6 +1,5 @@
 
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
@@ -10,8 +9,6 @@ import Benefits from '@/components/sections/Benefits';
 import Testimonials from '@/components/sections/Testimonials';
 
 const Index = () => {
-  const navigate = useNavigate();
-  
   useEffect(() => {
     // Intersection Observer to handle reveal animations
     const observer = new IntersectionObserver(
@@ -37,10 +34,6 @@ const Index = () => {
     };
   }, []);
 
-  const handleGetStarted = () => {
-    navigate('/registration');
-  };
-
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -50,28 +43,6 @@ const Index = () => {
         <Registration />
         <Benefits />
         <Testimonials />
-        
-        {/* CTA Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Ready to simplify your business journey?
-              </h2>
-              <p className="text-lg text-gray-600 mb-10">
-                Join thousands of businesses that trust Bizsimpl for their registration and compliance needs.
-              </p>
-              <div className="inline-flex gap-4">
-                <a 
-                  onClick={handleGetStarted}
-                  className="px-6 py-3 rounded-lg bg-bizsimpl-600 text-white font-medium hover:bg-bizsimpl-700 transition-colors cursor-pointer"
-                >
-                  Get Started Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>

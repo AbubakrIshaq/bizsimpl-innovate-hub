@@ -46,7 +46,7 @@ const Hero = () => {
   }, []);
 
   const handleGetStarted = () => {
-    navigate('/registration');
+    navigate('/pricing');
   };
 
   return (

@@ -20,10 +20,9 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const navLinks = [
-    { name: 'Features', href: '#features' },
-    { name: 'Benefits', href: '#benefits' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Pricing', href: '#pricing' }
+    { name: 'Features', href: '/features' },
+    { name: 'Benefits', href: '/benefits' },
+    { name: 'Pricing', href: '/pricing' }
   ];
 
   useEffect(() => {
@@ -34,10 +33,6 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleGetStarted = () => {
-    navigate('/registration');
-  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass shadow-sm py-3' : 'bg-transparent py-5'}`}>
@@ -91,20 +86,15 @@ const Navbar = () => {
             
             {/* Other Navigation Links */}
             {navLinks.map((link) => (
-              <a 
+              <Link 
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-bizsimpl-600 transition-colors rounded-md"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </nav>
-
-          {/* CTA Buttons - Removed login button, only showing Get Started */}
-          <div className="hidden md:flex items-center">
-            <CustomButton size="sm" onClick={handleGetStarted}>Get Started</CustomButton>
-          </div>
 
           {/* Mobile Menu Button */}
           <button 
@@ -157,20 +147,15 @@ const Navbar = () => {
           
           {/* Other Nav Links for Mobile */}
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-bizsimpl-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <div className="pt-4 flex flex-col">
-            <CustomButton size="sm" className="justify-center" onClick={handleGetStarted}>
-              Get Started
-            </CustomButton>
-          </div>
         </div>
       </div>
     </header>

@@ -10,6 +10,9 @@ import PrivateLimited from "./pages/PrivateLimited";
 import LLP from "./pages/LLP";
 import OnePersonCompany from "./pages/OnePersonCompany";
 import Registration from "./pages/Registration";
+import Features from "./pages/Features";
+import Benefits from "./pages/Benefits";
+import Pricing from "./pages/Pricing";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +28,9 @@ const App = () => (
           <Route path="/llp" element={<LLP />} />
           <Route path="/one-person-company" element={<OnePersonCompany />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/benefits" element={<Benefits />} />
+          <Route path="/pricing" element={<Pricing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
