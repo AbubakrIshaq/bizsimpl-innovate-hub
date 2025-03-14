@@ -1,15 +1,24 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Building, Briefcase, UserRound } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Company Registration', href: '#registration' },
     { name: 'Features', href: '#features' },
     { name: 'Benefits', href: '#benefits' },
     { name: 'Testimonials', href: '#testimonials' },
@@ -36,6 +45,46 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
+            {/* Company Registration Dropdown */}
+            <div className="relative px-3 py-2">
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center text-sm font-medium text-gray-700 hover:text-bizsimpl-600 transition-colors rounded-md focus:outline-none">
+                  Company Registration
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-72 bg-white">
+                  <Link to="/private-limited">
+                    <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
+                      <Building className="h-5 w-5 text-bizsimpl-600" />
+                      <div>
+                        <div className="font-medium">Private Limited Company</div>
+                        <div className="text-xs text-gray-500">Register your business as a private limited company</div>
+                      </div>
+                    </DropdownMenuItem>
+                  </Link>
+                  <Link to="/llp">
+                    <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
+                      <Briefcase className="h-5 w-5 text-bizsimpl-600" />
+                      <div>
+                        <div className="font-medium">Limited Liability Partnership</div>
+                        <div className="text-xs text-gray-500">Form a partnership with limited liability</div>
+                      </div>
+                    </DropdownMenuItem>
+                  </Link>
+                  <Link to="/one-person-company">
+                    <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
+                      <UserRound className="h-5 w-5 text-bizsimpl-600" />
+                      <div>
+                        <div className="font-medium">One Person Company</div>
+                        <div className="text-xs text-gray-500">Start a company with a single director</div>
+                      </div>
+                    </DropdownMenuItem>
+                  </Link>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+            
+            {/* Other Navigation Links */}
             {navLinks.map((link) => (
               <a 
                 key={link.name}
@@ -66,6 +115,43 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`md:hidden transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-6 pt-2 pb-4 space-y-1 bg-white border-t border-gray-100">
+          {/* Company Registration Dropdown for Mobile */}
+          <div className="block">
+            <Collapsible>
+              <CollapsibleTrigger className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-bizsimpl-600 hover:bg-gray-50 rounded-md">
+                Company Registration
+                <ChevronDown className="h-4 w-4" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="pl-4 space-y-1 mt-1">
+                <Link
+                  to="/private-limited"
+                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-bizsimpl-600 hover:bg-gray-50 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Building className="h-4 w-4" />
+                  <span>Private Limited Company</span>
+                </Link>
+                <Link
+                  to="/llp"
+                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-bizsimpl-600 hover:bg-gray-50 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Briefcase className="h-4 w-4" />
+                  <span>Limited Liability Partnership</span>
+                </Link>
+                <Link
+                  to="/one-person-company"
+                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-bizsimpl-600 hover:bg-gray-50 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <UserRound className="h-4 w-4" />
+                  <span>One Person Company</span>
+                </Link>
+              </CollapsibleContent>
+            </Collapsible>
+          </div>
+          
+          {/* Other Nav Links for Mobile */}
           {navLinks.map((link) => (
             <a
               key={link.name}
