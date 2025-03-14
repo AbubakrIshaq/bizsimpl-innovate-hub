@@ -9,37 +9,37 @@ const Footer = () => {
     {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '#' },
-        { name: 'Careers', href: '#' },
-        { name: 'Blog', href: '#' },
-        { name: 'Press', href: '#' }
+        { name: 'About Us', href: '/about-us' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Press', href: '/press' }
       ]
     },
     {
       title: 'Solutions',
       links: [
-        { name: 'Company Registration', href: '#' },
-        { name: 'Business Management', href: '#' },
-        { name: 'Compliance', href: '#' },
-        { name: 'Taxation', href: '#' }
+        { name: 'Company Registration', href: '/private-limited' },
+        { name: 'Business Management', href: '/solutions/business-management' },
+        { name: 'Compliance', href: '/solutions/compliance' },
+        { name: 'Taxation', href: '/solutions/taxation' }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Help Center', href: '#' },
-        { name: 'FAQs', href: '#' },
-        { name: 'Documentation', href: '#' },
-        { name: 'API Reference', href: '#' }
+        { name: 'Help Center', href: '/resources/help-center' },
+        { name: 'FAQs', href: '/resources/faqs' },
+        { name: 'Documentation', href: '/resources/documentation' },
+        { name: 'API Reference', href: '/resources/api-reference' }
       ]
     },
     {
       title: 'Legal',
       links: [
-        { name: 'Privacy Policy', href: '#' },
-        { name: 'Terms of Service', href: '#' },
-        { name: 'Cookie Policy', href: '#' },
-        { name: 'Security', href: '#' }
+        { name: 'Privacy Policy', href: '/legal/privacy-policy' },
+        { name: 'Terms of Service', href: '/legal/terms-of-service' },
+        { name: 'Cookie Policy', href: '/legal/cookie-policy' },
+        { name: 'Security', href: '/legal/security' }
       ]
     }
   ];
@@ -73,12 +73,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {group.links.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href} 
+                    <Link 
+                      to={link.href} 
                       className="text-sm text-gray-600 hover:text-bizsimpl-600 transition-colors"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
