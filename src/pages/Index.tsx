@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
@@ -9,6 +10,8 @@ import Benefits from '@/components/sections/Benefits';
 import Testimonials from '@/components/sections/Testimonials';
 
 const Index = () => {
+  const navigate = useNavigate();
+  
   useEffect(() => {
     // Intersection Observer to handle reveal animations
     const observer = new IntersectionObserver(
@@ -35,7 +38,7 @@ const Index = () => {
   }, []);
 
   const handleGetStarted = () => {
-    window.location.href = "https://accounts.razorpay.com/auth/?redirecturl=https%3A%2F%2Feasy.razorpay.com%2Frize%2Fincorporation%2Fonboarding%3Fvisitor_id%3D601a54dd81d8e--1f62992176b2e%26utm_source%3Ddirect%26utm_medium%3Dwebsite%26section_source%3Dnavbar&product=rize_incorporation";
+    navigate('/registration');
   };
 
   return (

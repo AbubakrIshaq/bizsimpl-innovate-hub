@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
 import { Menu, X, ChevronDown, Building, Briefcase, UserRound } from 'lucide-react';
 import {
@@ -17,6 +18,7 @@ import {
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navLinks = [
     { name: 'Features', href: '#features' },
@@ -33,6 +35,10 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleGetStarted = () => {
+    navigate('/registration');
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass shadow-sm py-3' : 'bg-transparent py-5'}`}>
@@ -99,7 +105,7 @@ const Navbar = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <CustomButton variant="outline" size="sm">Log in</CustomButton>
-            <CustomButton size="sm">Get Started</CustomButton>
+            <CustomButton size="sm" onClick={handleGetStarted}>Get Started</CustomButton>
           </div>
 
           {/* Mobile Menu Button */}
@@ -166,7 +172,7 @@ const Navbar = () => {
             <CustomButton variant="outline" size="sm" className="justify-center">
               Log in
             </CustomButton>
-            <CustomButton size="sm" className="justify-center">
+            <CustomButton size="sm" className="justify-center" onClick={handleGetStarted}>
               Get Started
             </CustomButton>
           </div>
