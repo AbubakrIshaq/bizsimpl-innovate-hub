@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
@@ -102,9 +101,8 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <CustomButton variant="outline" size="sm">Log in</CustomButton>
+          {/* CTA Buttons - Removed login button, only showing Get Started */}
+          <div className="hidden md:flex items-center">
             <CustomButton size="sm" onClick={handleGetStarted}>Get Started</CustomButton>
           </div>
 
@@ -168,10 +166,7 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <div className="pt-4 flex flex-col space-y-3">
-            <CustomButton variant="outline" size="sm" className="justify-center">
-              Log in
-            </CustomButton>
+          <div className="pt-4 flex flex-col">
             <CustomButton size="sm" className="justify-center" onClick={handleGetStarted}>
               Get Started
             </CustomButton>

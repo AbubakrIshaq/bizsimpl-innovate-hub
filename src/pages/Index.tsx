@@ -68,9 +68,6 @@ const Index = () => {
                 >
                   Get Started Now
                 </a>
-                <a href="#" className="px-6 py-3 rounded-lg border border-bizsimpl-200 text-bizsimpl-700 font-medium hover:bg-bizsimpl-50 transition-colors">
-                  Contact Sales
-                </a>
               </div>
             </div>
           </div>

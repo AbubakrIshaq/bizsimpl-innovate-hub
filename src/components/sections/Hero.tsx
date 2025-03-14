@@ -78,9 +78,6 @@ const Hero = () => {
             <CustomButton size="lg" className="w-full sm:w-auto" onClick={handleGetStarted}>
               Get Started <ArrowRight size={16} className="ml-2" />
             </CustomButton>
-            <CustomButton variant="outline" size="lg" className="w-full sm:w-auto">
-              Book a Demo
-            </CustomButton>
           </div>
           
           <div className="reveal reveal-up">
