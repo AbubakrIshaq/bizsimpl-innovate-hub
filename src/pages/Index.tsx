@@ -34,6 +34,10 @@ const Index = () => {
     };
   }, []);
 
+  const handleGetStarted = () => {
+    window.location.href = "https://accounts.razorpay.com/auth/?redirecturl=https%3A%2F%2Feasy.razorpay.com%2Frize%2Fincorporation%2Fonboarding%3Fvisitor_id%3D601a54dd81d8e--1f62992176b2e%26utm_source%3Ddirect%26utm_medium%3Dwebsite%26section_source%3Dnavbar&product=rize_incorporation";
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -55,7 +59,10 @@ const Index = () => {
                 Join thousands of businesses that trust Bizsimpl for their registration and compliance needs.
               </p>
               <div className="inline-flex gap-4">
-                <a href="#registration" className="px-6 py-3 rounded-lg bg-bizsimpl-600 text-white font-medium hover:bg-bizsimpl-700 transition-colors">
+                <a 
+                  onClick={handleGetStarted}
+                  className="px-6 py-3 rounded-lg bg-bizsimpl-600 text-white font-medium hover:bg-bizsimpl-700 transition-colors cursor-pointer"
+                >
                   Get Started Now
                 </a>
                 <a href="#" className="px-6 py-3 rounded-lg border border-bizsimpl-200 text-bizsimpl-700 font-medium hover:bg-bizsimpl-50 transition-colors">

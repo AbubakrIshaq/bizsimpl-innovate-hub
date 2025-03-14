@@ -2,6 +2,7 @@
 import React from 'react';
 import { CustomButton } from '../ui/CustomButton';
 import { CustomCard } from '../ui/CustomCard';
+import { Link } from 'react-router-dom';
 
 const Registration = () => {
   return (
@@ -23,6 +24,7 @@ const Registration = () => {
           <div className="flex justify-center mb-12 lg:hidden">
             <CustomButton 
               className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-lg"
+              onClick={() => window.location.href="https://accounts.razorpay.com/auth/?redirecturl=https%3A%2F%2Feasy.razorpay.com%2Frize%2Fincorporation%2Fonboarding%3Fvisitor_id%3D601a54dd81d8e--1f62992176b2e%26utm_source%3Ddirect%26utm_medium%3Dwebsite%26section_source%3Dnavbar&product=rize_incorporation"}
             >
               Register your Business
             </CustomButton>
@@ -52,12 +54,14 @@ const Registration = () => {
                 </p>
               </div>
               <div className="lg:col-span-2 flex justify-center lg:justify-end">
-                <CustomButton 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white/10 whitespace-nowrap"
-                >
-                  Learn More
-                </CustomButton>
+                <Link to="/private-limited">
+                  <CustomButton 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white/10 whitespace-nowrap"
+                  >
+                    Learn More
+                  </CustomButton>
+                </Link>
               </div>
             </div>
 
@@ -83,12 +87,14 @@ const Registration = () => {
                 </p>
               </div>
               <div className="lg:col-span-2 flex justify-center lg:justify-end">
-                <CustomButton 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white/10 whitespace-nowrap"
-                >
-                  Learn More
-                </CustomButton>
+                <Link to="/llp">
+                  <CustomButton 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white/10 whitespace-nowrap"
+                  >
+                    Learn More
+                  </CustomButton>
+                </Link>
               </div>
             </div>
 
@@ -114,12 +120,14 @@ const Registration = () => {
                 </p>
               </div>
               <div className="lg:col-span-2 flex justify-center lg:justify-end">
-                <CustomButton 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white/10 whitespace-nowrap"
-                >
-                  Learn More
-                </CustomButton>
+                <Link to="/one-person-company">
+                  <CustomButton 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white/10 whitespace-nowrap"
+                  >
+                    Learn More
+                  </CustomButton>
+                </Link>
               </div>
             </div>
           </div>
@@ -128,6 +136,7 @@ const Registration = () => {
           <div className="hidden lg:flex justify-end mt-12">
             <CustomButton 
               className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg text-lg"
+              onClick={() => window.location.href="https://accounts.razorpay.com/auth/?redirecturl=https%3A%2F%2Feasy.razorpay.com%2Frize%2Fincorporation%2Fonboarding%3Fvisitor_id%3D601a54dd81d8e--1f62992176b2e%26utm_source%3Ddirect%26utm_medium%3Dwebsite%26section_source%3Dnavbar&product=rize_incorporation"}
             >
               Register your Business
             </CustomButton>

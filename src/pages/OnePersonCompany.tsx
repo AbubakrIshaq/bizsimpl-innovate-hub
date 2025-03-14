@@ -6,6 +6,10 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle } from 'lucide-react';
 
 const OnePersonCompany = () => {
+  const handleRegister = () => {
+    window.location.href = "https://accounts.razorpay.com/auth/?redirecturl=https%3A%2F%2Feasy.razorpay.com%2Frize%2Fincorporation%2Fonboarding%3Fvisitor_id%3D601a54dd81d8e--1f62992176b2e%26utm_source%3Ddirect%26utm_medium%3Dwebsite%26section_source%3Dnavbar&product=rize_incorporation";
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -22,7 +26,10 @@ const OnePersonCompany = () => {
                 <p className="text-lg mb-8 text-white/90">
                   Start your solo business journey with limited liability protection. Register your OPC today.
                 </p>
-                <Button className="text-primary bg-white hover:bg-white/90 rounded-full px-8 py-6 font-medium text-base">
+                <Button 
+                  className="text-primary bg-white hover:bg-white/90 rounded-full px-8 py-6 font-medium text-base"
+                  onClick={handleRegister}
+                >
                   Start Registration
                 </Button>
               </div>

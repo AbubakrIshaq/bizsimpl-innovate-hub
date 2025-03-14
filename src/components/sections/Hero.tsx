@@ -43,6 +43,10 @@ const Hero = () => {
     return () => elements?.forEach((el) => observer.unobserve(el));
   }, []);
 
+  const handleGetStarted = () => {
+    window.location.href = "https://accounts.razorpay.com/auth/?redirecturl=https%3A%2F%2Feasy.razorpay.com%2Frize%2Fincorporation%2Fonboarding%3Fvisitor_id%3D601a54dd81d8e--1f62992176b2e%26utm_source%3Ddirect%26utm_medium%3Dwebsite%26section_source%3Dnavbar&product=rize_incorporation";
+  };
+
   return (
     <div 
       ref={heroRef}
@@ -69,7 +73,7 @@ const Hero = () => {
           </p>
           
           <div className="reveal reveal-up flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <CustomButton size="lg" className="w-full sm:w-auto">
+            <CustomButton size="lg" className="w-full sm:w-auto" onClick={handleGetStarted}>
               Get Started <ArrowRight size={16} className="ml-2" />
             </CustomButton>
             <CustomButton variant="outline" size="lg" className="w-full sm:w-auto">
