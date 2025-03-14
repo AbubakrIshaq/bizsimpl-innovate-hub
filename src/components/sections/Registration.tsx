@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Registration = () => {
   return (
-    <section id="registration" className="py-20 bg-gradient-cobalt text-white">
+    <section id="registration" className="py-20 bg-gradient-navy text-white">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -22,12 +22,13 @@ const Registration = () => {
 
           {/* CTA Button for Small Screens */}
           <div className="flex justify-center mb-12 lg:hidden">
-            <CustomButton 
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-lg"
-              onClick={() => window.location.href="https://accounts.razorpay.com/auth/?redirecturl=https%3A%2F%2Feasy.razorpay.com%2Frize%2Fincorporation%2Fonboarding%3Fvisitor_id%3D601a54dd81d8e--1f62992176b2e%26utm_source%3Ddirect%26utm_medium%3Dwebsite%26section_source%3Dnavbar&product=rize_incorporation"}
-            >
-              Register your Business
-            </CustomButton>
+            <Link to="/registration">
+              <CustomButton 
+                className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-8 py-4 rounded-lg text-lg"
+              >
+                Register your Business
+              </CustomButton>
+            </Link>
           </div>
 
           {/* Company Types Grid */}
@@ -134,12 +135,13 @@ const Registration = () => {
 
           {/* CTA Button for Large Screens */}
           <div className="hidden lg:flex justify-end mt-12">
-            <CustomButton 
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg text-lg"
-              onClick={() => window.location.href="https://accounts.razorpay.com/auth/?redirecturl=https%3A%2F%2Feasy.razorpay.com%2Frize%2Fincorporation%2Fonboarding%3Fvisitor_id%3D601a54dd81d8e--1f62992176b2e%26utm_source%3Ddirect%26utm_medium%3Dwebsite%26section_source%3Dnavbar&product=rize_incorporation"}
-            >
-              Register your Business
-            </CustomButton>
+            <Link to="/registration">
+              <CustomButton 
+                className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-8 py-3 rounded-lg text-lg"
+              >
+                Register your Business
+              </CustomButton>
+            </Link>
           </div>
         </div>
       </div>

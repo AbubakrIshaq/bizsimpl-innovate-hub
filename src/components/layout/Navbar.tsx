@@ -43,58 +43,63 @@ const Navbar = () => {
             <span className="text-xl font-bold text-bizsimpl-950">Biz<span className="text-bizsimpl-600">simpl</span></span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
-            {/* Company Registration Dropdown */}
-            <div className="relative px-3 py-2">
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center text-sm font-medium text-gray-700 hover:text-bizsimpl-600 transition-colors rounded-md focus:outline-none">
-                  Company Registration
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-72 bg-white">
-                  <Link to="/private-limited">
-                    <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
-                      <Building className="h-5 w-5 text-bizsimpl-600" />
-                      <div>
-                        <div className="font-medium">Private Limited Company</div>
-                        <div className="text-xs text-gray-500">Register your business as a private limited company</div>
-                      </div>
-                    </DropdownMenuItem>
-                  </Link>
-                  <Link to="/llp">
-                    <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
-                      <Briefcase className="h-5 w-5 text-bizsimpl-600" />
-                      <div>
-                        <div className="font-medium">Limited Liability Partnership</div>
-                        <div className="text-xs text-gray-500">Form a partnership with limited liability</div>
-                      </div>
-                    </DropdownMenuItem>
-                  </Link>
-                  <Link to="/one-person-company">
-                    <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
-                      <UserRound className="h-5 w-5 text-bizsimpl-600" />
-                      <div>
-                        <div className="font-medium">One Person Company</div>
-                        <div className="text-xs text-gray-500">Start a company with a single director</div>
-                      </div>
-                    </DropdownMenuItem>
-                  </Link>
-                </DropdownMenuContent>
-              </DropdownMenu>
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden md:flex items-center justify-center flex-grow mx-auto">
+            <div className="flex items-center space-x-1">
+              {/* Company Registration Dropdown */}
+              <div className="relative px-3 py-2">
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="flex items-center text-sm font-medium text-gray-700 hover:text-bizsimpl-600 transition-colors rounded-md focus:outline-none">
+                    Company Registration
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-72 bg-white">
+                    <Link to="/private-limited">
+                      <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
+                        <Building className="h-5 w-5 text-bizsimpl-600" />
+                        <div>
+                          <div className="font-medium">Private Limited Company</div>
+                          <div className="text-xs text-gray-500">Register your business as a private limited company</div>
+                        </div>
+                      </DropdownMenuItem>
+                    </Link>
+                    <Link to="/llp">
+                      <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
+                        <Briefcase className="h-5 w-5 text-bizsimpl-600" />
+                        <div>
+                          <div className="font-medium">Limited Liability Partnership</div>
+                          <div className="text-xs text-gray-500">Form a partnership with limited liability</div>
+                        </div>
+                      </DropdownMenuItem>
+                    </Link>
+                    <Link to="/one-person-company">
+                      <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
+                        <UserRound className="h-5 w-5 text-bizsimpl-600" />
+                        <div>
+                          <div className="font-medium">One Person Company</div>
+                          <div className="text-xs text-gray-500">Start a company with a single director</div>
+                        </div>
+                      </DropdownMenuItem>
+                    </Link>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+              
+              {/* Other Navigation Links */}
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.name}
+                  to={link.href}
+                  className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-bizsimpl-600 transition-colors rounded-md"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
-            
-            {/* Other Navigation Links */}
-            {navLinks.map((link) => (
-              <Link 
-                key={link.name}
-                to={link.href}
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-bizsimpl-600 transition-colors rounded-md"
-              >
-                {link.name}
-              </Link>
-            ))}
           </nav>
+
+          {/* Placeholder div to balance the navbar */}
+          <div className="hidden md:block w-[100px]"></div>
 
           {/* Mobile Menu Button */}
           <button 

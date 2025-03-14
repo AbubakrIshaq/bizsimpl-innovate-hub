@@ -429,9 +429,11 @@ const Pricing = () => {
               <p className="text-xl text-white/80 mb-10">
                 Join thousands of entrepreneurs who have successfully registered their businesses with Bizsimpl.
               </p>
-              <CustomButton size="lg" className="bg-white text-bizsimpl-700 hover:bg-gray-100">
-                Get Started Today
-              </CustomButton>
+              <Link to="/registration">
+                <CustomButton size="lg" className="bg-white text-bizsimpl-700 hover:bg-gray-100">
+                  Get Started Today
+                </CustomButton>
+              </Link>
             </div>
           </div>
         </section>
