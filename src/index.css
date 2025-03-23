@@ -79,6 +79,7 @@
   /* Logo carousel animation */
   .logo-scroll {
     @apply flex animate-scroll;
+    width: calc(250px * 15); /* Ensure it's wide enough to display all logos */
   }
   
   .logo-item {

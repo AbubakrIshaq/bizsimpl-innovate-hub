@@ -79,32 +79,33 @@ const Hero = () => {
               Get Started <ArrowRight size={16} className="ml-2" />
             </CustomButton>
           </div>
-          
-          <div className="reveal reveal-up">
-            <p className="text-sm text-gray-500 mb-3">Trusted by innovative businesses</p>
-            <div className="w-full overflow-hidden">
-              <Carousel 
-                opts={{ 
-                  align: "start", 
-                  loop: true,
-                  dragFree: true
-                }}
-                className="w-full"
-              >
-                <CarouselContent className="py-4 logo-scroll">
-                  {companyLogos.map((company, index) => (
-                    <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 logo-item">
-                      <div className="flex items-center justify-center h-10 mx-auto">
-                        <div className="h-6 w-24 bg-gray-200/70 rounded flex items-center justify-center text-xs text-gray-500 font-medium">
-                          {company.name}
-                        </div>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
-            </div>
-          </div>
+        </div>
+      </div>
+      
+      {/* Full-width company logo carousel */}
+      <div className="reveal reveal-up w-full">
+        <p className="text-sm text-gray-500 mb-3 text-center">Trusted by innovative businesses</p>
+        <div className="w-full overflow-hidden">
+          <Carousel 
+            opts={{ 
+              align: "start", 
+              loop: true,
+              dragFree: true
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="py-4 logo-scroll">
+              {companyLogos.map((company, index) => (
+                <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 logo-item">
+                  <div className="flex items-center justify-center h-10 mx-auto">
+                    <div className="h-6 w-24 bg-gray-200/70 rounded flex items-center justify-center text-xs text-gray-500 font-medium">
+                      {company.name}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </div>
