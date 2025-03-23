@@ -71,6 +71,7 @@ export default {
 					primary: '#1A2C56',    // Navy blue
 					secondary: '#0EA5E9',  // Cobalt blue
 					tertiary: '#FFFFFF',   // White
+					purple: '#7B0DC4',     // BizSimpl purple (from logo)
 				}
 			},
 			borderRadius: {
@@ -145,6 +146,7 @@ export default {
 				'gradient-rust': 'linear-gradient(90deg, #B85042 0%, #d46e60 100%)',
 				'gradient-navy': 'linear-gradient(90deg, #1A2C56 0%, #2d4272 100%)',
 				'gradient-cobalt': 'linear-gradient(90deg, #0EA5E9 0%, #38bdf8 100%)',
+				'gradient-purple': 'linear-gradient(90deg, #7B0DC4 0%, #9B3DE0 100%)',
 			},
 		}
 	},

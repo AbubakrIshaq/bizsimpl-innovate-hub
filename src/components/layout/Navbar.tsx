@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
@@ -40,7 +41,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-xl font-bold text-bizsimpl-950">Biz<span className="text-bizsimpl-600">simpl</span></span>
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/e73da025-cc9d-4518-abc3-8a07994b3db4.png" 
+                alt="BizSimpl Logo" 
+                className="h-8 w-auto"
+                style={{filter: "brightness(0) saturate(100%) invert(20%) sepia(97%) saturate(5209%) hue-rotate(267deg) brightness(83%) contrast(111%)"}}
+              />
+              <span className="sr-only">BizSimpl</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation - Centered */}

@@ -34,6 +34,9 @@
     --ring: 222 47% 25%;
 
     --radius: 0.75rem;
+    
+    /* New BizSimpl brand color */
+    --bizsimpl-purple: 272 88% 41%;  /* BizSimpl purple from logo */
   }
  
   * {
@@ -64,6 +67,10 @@
     @apply bg-primary bg-clip-text text-transparent;
   }
   
+  .text-gradient-purple {
+    @apply bg-gradient-purple bg-clip-text text-transparent;
+  }
+  
   .section-padding {
     @apply py-20 px-6 md:px-12 lg:px-24;
   }
@@ -92,6 +99,15 @@
   }
   
   .bizsimpl-logo:hover {
+    @apply shadow-md scale-105;
+  }
+  
+  /* New purple logo styling */
+  .bizsimpl-purple-logo {
+    @apply text-white bg-gradient-purple rounded-lg flex items-center justify-center transition-all duration-300;
+  }
+  
+  .bizsimpl-purple-logo:hover {
     @apply shadow-md scale-105;
   }
 }
