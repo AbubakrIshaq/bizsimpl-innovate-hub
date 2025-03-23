@@ -85,6 +85,15 @@
   .logo-item {
     @apply flex-shrink-0 flex items-center justify-center p-2 transition-all duration-300 grayscale hover:grayscale-0;
   }
+  
+  /* Logo styling */
+  .bizsimpl-logo {
+    @apply text-white bg-gradient-cobalt rounded-lg flex items-center justify-center transition-all duration-300;
+  }
+  
+  .bizsimpl-logo:hover {
+    @apply shadow-md scale-105;
+  }
 }
 
 @keyframes scroll {

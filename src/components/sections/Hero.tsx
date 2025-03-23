@@ -52,7 +52,7 @@ const Hero = () => {
   return (
     <div 
       ref={heroRef}
-      className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-between pt-24 pb-20 overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
@@ -60,8 +60,21 @@ const Hero = () => {
         <div className="absolute bottom-0 left-0 w-[50%] h-[50%] bg-gradient-radial from-bizsimpl-50/50 to-transparent opacity-60"></div>
       </div>
       
-      <div className="container mx-auto px-6 lg:px-8">
+      {/* Main content section */}
+      <div className="container mx-auto px-6 lg:px-8 mb-16">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Logo */}
+          <div className="reveal reveal-up flex justify-center mb-6">
+            <div className="flex items-center gap-2">
+              <div className="text-bizsimpl-700 bg-gradient-cobalt w-10 h-10 rounded-lg flex items-center justify-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 12H20M4 12L8 8M4 12L8 16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span className="font-bold text-2xl">BizSimpl</span>
+            </div>
+          </div>
+          
           <span className="inline-block reveal reveal-up px-4 py-2 mb-6 rounded-full bg-bizsimpl-50 text-bizsimpl-700 text-sm font-medium">
             Simplified Business Registration & Compliance
           </span>
@@ -83,7 +96,7 @@ const Hero = () => {
       </div>
       
       {/* Full-width company logo carousel */}
-      <div className="reveal reveal-up w-full">
+      <div className="reveal reveal-up w-full mt-auto">
         <p className="text-sm text-gray-500 mb-3 text-center">Trusted by innovative businesses</p>
         <div className="w-full overflow-hidden">
           <Carousel 
