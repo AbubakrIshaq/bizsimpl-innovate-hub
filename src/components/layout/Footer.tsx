@@ -54,14 +54,14 @@ const Footer = () => {
               <span className="text-xl font-bold text-bizsimpl-950">Biz<span className="text-bizsimpl-600">simpl</span></span>
             </div>
             <p className="text-gray-600 mb-6 max-w-md">
-              Simplifying business registrations and compliance for entrepreneurs and established companies.
+              We provide comprehensive guidance to entrepreneurs in choosing the right business structure in India. From founder-friendly private limited companies to efficient LLPs and OPCs, we offer tailored solutions with our expertise. Trust BizSimpl to simplify your startup journey.
             </p>
             <div className="space-y-3">
               <p className="text-sm text-gray-500">
-                <span className="font-medium">Email:</span> contact@bizsimpl.com
+                <span className="font-medium">Email:</span> hello@bizsimpl.com
               </p>
               <p className="text-sm text-gray-500">
-                <span className="font-medium">Phone:</span> +1 (555) 123-4567
+                <span className="font-medium">Phone:</span> +91 (789) 532-4680
               </p>
             </div>
           </div>

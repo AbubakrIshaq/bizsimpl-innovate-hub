@@ -86,7 +86,7 @@ const Hero = () => {
       {/* Full-width company logo carousel */}
       <div className="reveal w-full mt-auto px-6 lg:px-8">
         <p className="text-sm text-gray-500 mb-3 text-center">Trusted by innovative businesses</p>
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden bg-white/50 py-6 px-4 rounded-lg">
           <Carousel 
             opts={{ 
               align: "start", 
@@ -95,11 +95,11 @@ const Hero = () => {
             }}
             className="w-full"
           >
-            <CarouselContent className="py-4 logo-scroll gap-x-3">
+            <CarouselContent className="py-2 logo-scroll gap-x-1">
               {companyLogos.map((company, index) => (
-                <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 logo-item">
-                  <div className="flex items-center justify-center h-10 mx-auto">
-                    <div className="h-6 w-24 bg-gray-200/70 rounded flex items-center justify-center text-xs text-gray-500 font-medium">
+                <CarouselItem key={index} className="basis-1/4 sm:basis-1/5 md:basis-1/6 lg:basis-1/8 logo-item">
+                  <div className="flex items-center justify-center h-8 mx-auto">
+                    <div className="h-5 w-20 bg-gray-200/70 rounded flex items-center justify-center text-xs text-gray-500 font-medium">
                       {company.name}
                     </div>
                   </div>
