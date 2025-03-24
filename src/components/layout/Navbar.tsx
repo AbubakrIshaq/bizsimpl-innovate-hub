@@ -39,8 +39,15 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <span className="text-xl font-bold text-gray-900">BizSimplStartup</span>
+          <Link to="/" className="flex items-center space-x-2">
+            <img 
+              src="/lovable-uploads/1f646fc7-0cab-4348-bd28-99c2a8d3bd5f.png" 
+              alt="BizSimpl Logo" 
+              className="h-8 w-8" 
+            />
+            <span className="text-xl font-bold text-purple-700" style={{ fontFamily: 'Arial, sans-serif' }}>
+              BizSimpl <span className="ml-1">Startup</span>
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center justify-center flex-grow mx-auto">

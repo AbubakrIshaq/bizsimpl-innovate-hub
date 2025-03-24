@@ -50,9 +50,6 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
-            <div className="flex items-center mb-4">
-              <span className="text-xl font-bold text-gray-900">BizSimplStartup</span>
-            </div>
             <div className="text-gray-600 mb-6 max-w-md">
               <p className="mb-6 font-bold">Head Office Address</p>
               <p className="mb-6">Indiqube Penta, 32, Shanthala Nagar, Richmond Town, Bengaluru, Karnataka 560025.</p>
@@ -91,7 +88,7 @@ const Footer = () => {
         <div className="border-t border-gray-200 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500 mb-4 md:mb-0">
-              © {currentYear} BizSimplStartup. All rights reserved.
+              © {currentYear} All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-500 hover:text-secondary">
