@@ -7,7 +7,6 @@ import BizSimplInfo from '@/components/sections/BizSimplInfo';
 import Registration from '@/components/sections/Registration';
 import Benefits from '@/components/sections/Benefits';
 import Testimonials from '@/components/sections/Testimonials';
-import StatsSection from '@/components/sections/StatsSection';
 
 const Index = () => {
   useEffect(() => {
@@ -43,7 +42,6 @@ const Index = () => {
         <BizSimplInfo />
         <Registration />
         <Benefits />
-        <StatsSection />
         <Testimonials />
       </main>
       <Footer />

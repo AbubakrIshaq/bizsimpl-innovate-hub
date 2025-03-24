@@ -26,8 +26,8 @@ const BizSimplInfo = () => {
   return (
     <section ref={infoRef} className="py-20 bg-white" id="about">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left column - What is BizSimplStartup */}
+        <div className="flex flex-col gap-12">
+          {/* What is BizSimplStartup */}
           <div className="reveal">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
               What is BizSimplStartup?
@@ -37,40 +37,31 @@ const BizSimplInfo = () => {
             </p>
           </div>
           
-          {/* Right column - Stats Cards */}
-          <div className="grid grid-cols-2 gap-4">
+          {/* Stats Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="reveal" style={{ transitionDelay: '0ms' }}>
               <CustomCard className="h-full">
-                <div className="flex flex-col items-center text-center p-4">
-                  <h3 className="text-3xl font-bold text-secondary mb-2">400+</h3>
-                  <p className="text-gray-600 text-sm">Businesses trust us</p>
+                <div className="flex flex-col items-center text-center p-6">
+                  <h3 className="text-4xl font-bold text-secondary mb-2">400+</h3>
+                  <p className="text-gray-600 text-base">Businesses trust us</p>
                 </div>
               </CustomCard>
             </div>
             
             <div className="reveal" style={{ transitionDelay: '100ms' }}>
               <CustomCard className="h-full">
-                <div className="flex flex-col items-center text-center p-4">
-                  <h3 className="text-3xl font-bold text-secondary mb-2">500+</h3>
-                  <p className="text-gray-600 text-sm">Businesses Incorporated</p>
+                <div className="flex flex-col items-center text-center p-6">
+                  <h3 className="text-4xl font-bold text-secondary mb-2">500+</h3>
+                  <p className="text-gray-600 text-base">Businesses Incorporated</p>
                 </div>
               </CustomCard>
             </div>
             
             <div className="reveal" style={{ transitionDelay: '200ms' }}>
               <CustomCard className="h-full">
-                <div className="flex flex-col items-center text-center p-4">
-                  <h3 className="text-3xl font-bold text-secondary mb-2">96%</h3>
-                  <p className="text-gray-600 text-sm">Success Rate</p>
-                </div>
-              </CustomCard>
-            </div>
-            
-            <div className="reveal" style={{ transitionDelay: '300ms' }}>
-              <CustomCard className="h-full">
-                <div className="flex flex-col items-center text-center p-4">
-                  <h3 className="text-3xl font-bold text-secondary mb-2">10+</h3>
-                  <p className="text-gray-600 text-sm">Years Of Experience</p>
+                <div className="flex flex-col items-center text-center p-6">
+                  <h3 className="text-4xl font-bold text-secondary mb-2">95%</h3>
+                  <p className="text-gray-600 text-base">Success Rate</p>
                 </div>
               </CustomCard>
             </div>
