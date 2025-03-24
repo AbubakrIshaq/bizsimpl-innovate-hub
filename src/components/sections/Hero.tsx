@@ -6,21 +6,12 @@ import { ArrowRight } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
 
 const companyLogos = [
-  { name: 'Google', logo: '/logos/google.svg' },
-  { name: 'Microsoft', logo: '/logos/microsoft.svg' },
-  { name: 'Amazon', logo: '/logos/amazon.svg' },
-  { name: 'Apple', logo: '/logos/apple.svg' },
   { name: 'Facebook', logo: '/logos/facebook.svg' },
   { name: 'Netflix', logo: '/logos/netflix.svg' },
   { name: 'Uber', logo: '/logos/uber.svg' },
   { name: 'Airbnb', logo: '/logos/airbnb.svg' },
   { name: 'Slack', logo: '/logos/slack.svg' },
-  { name: 'Dropbox', logo: '/logos/dropbox.svg' },
-  { name: 'Twitter', logo: '/logos/twitter.svg' },
-  { name: 'LinkedIn', logo: '/logos/linkedin.svg' },
-  { name: 'Spotify', logo: '/logos/spotify.svg' },
-  { name: 'Adobe', logo: '/logos/adobe.svg' },
-  { name: 'Salesforce', logo: '/logos/salesforce.svg' }
+  { name: 'Dropbox', logo: '/logos/dropbox.svg' }
 ];
 
 const Hero = () => {
@@ -83,30 +74,19 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Full-width company logo carousel */}
+      {/* Shorter company logo carousel with reduced spacing */}
       <div className="reveal w-full mt-auto px-6 lg:px-8">
         <p className="text-sm text-gray-500 mb-3 text-center">Trusted by innovative businesses</p>
-        <div className="w-full overflow-hidden bg-white/50 py-6 px-4 rounded-lg">
-          <Carousel 
-            opts={{ 
-              align: "start", 
-              loop: true,
-              dragFree: true
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="py-2 logo-scroll gap-x-1">
-              {companyLogos.map((company, index) => (
-                <CarouselItem key={index} className="basis-1/4 sm:basis-1/5 md:basis-1/6 lg:basis-1/8 logo-item">
-                  <div className="flex items-center justify-center h-8 mx-auto">
-                    <div className="h-5 w-20 bg-gray-200/70 rounded flex items-center justify-center text-xs text-gray-500 font-medium">
-                      {company.name}
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+        <div className="w-full max-w-4xl mx-auto overflow-hidden bg-white/50 py-4 px-4 rounded-lg">
+          <div className="flex justify-center items-center space-x-6 md:space-x-8">
+            {companyLogos.map((company, index) => (
+              <div key={index} className="flex items-center justify-center h-8">
+                <div className="h-5 px-3 bg-gray-200/70 rounded-md flex items-center justify-center text-xs text-gray-500 font-medium">
+                  {company.name}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

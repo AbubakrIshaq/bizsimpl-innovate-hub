@@ -37,6 +37,7 @@
     
     /* Brand colors */
     --bizsimpl-blue: 199 89% 48%;  /* BizSimpl blue color */
+    --bizsimpl-purple: 273 90% 40%; /* BizSimpl purple color - #7709c7 */
   }
  
   * {
@@ -70,6 +71,10 @@
   .text-gradient-blue {
     @apply bg-gradient-cobalt bg-clip-text text-transparent;
   }
+
+  .text-gradient-purple {
+    @apply bg-gradient-purple bg-clip-text text-transparent;
+  }
   
   .section-padding {
     @apply py-20 px-6 md:px-12 lg:px-24;
@@ -102,25 +107,30 @@
   
   /* Logo styling */
   .bizsimpl-logo {
-    @apply text-white bg-gradient-cobalt rounded-lg flex items-center justify-center transition-all duration-300;
+    @apply text-purple-700 flex items-center justify-center transition-all duration-300;
   }
   
   .bizsimpl-logo:hover {
     @apply shadow-md scale-105;
   }
   
-  /* Blue logo styling */
-  .bizsimpl-blue-logo {
-    @apply transition-all duration-300 filter-blue;
+  /* Purple logo styling */
+  .bizsimpl-purple-logo {
+    @apply transition-all duration-300;
   }
   
-  .bizsimpl-blue-logo:hover {
+  .bizsimpl-purple-logo:hover {
     @apply shadow-sm scale-105;
   }
 
   /* Filter to apply blue color */
   .filter-blue {
     filter: brightness(0) saturate(100%) invert(34%) sepia(99%) saturate(1472%) hue-rotate(183deg) brightness(97%) contrast(101%);
+  }
+
+  /* Filter to apply purple color */
+  .filter-purple {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(95%) saturate(5398%) hue-rotate(281deg) brightness(90%) contrast(114%);
   }
 }
 

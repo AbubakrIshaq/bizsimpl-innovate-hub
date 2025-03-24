@@ -33,22 +33,22 @@ const StatsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
           <div className="reveal text-center" style={{ transitionDelay: '0ms' }}>
-            <h3 className="text-5xl font-bold text-bizsimpl-700 mb-4">12</h3>
+            <h3 className="text-5xl font-bold text-purple-700 mb-4">12</h3>
             <p className="text-gray-600 text-lg">Local Partnerships</p>
           </div>
           
           <div className="reveal text-center" style={{ transitionDelay: '100ms' }}>
-            <h3 className="text-5xl font-bold text-bizsimpl-700 mb-4">40</h3>
+            <h3 className="text-5xl font-bold text-purple-700 mb-4">40</h3>
             <p className="text-gray-600 text-lg">Years of Experience</p>
           </div>
           
           <div className="reveal text-center" style={{ transitionDelay: '200ms' }}>
-            <h3 className="text-5xl font-bold text-bizsimpl-700 mb-4">03</h3>
+            <h3 className="text-5xl font-bold text-purple-700 mb-4">03</h3>
             <p className="text-gray-600 text-lg">International Awards</p>
           </div>
           
           <div className="reveal text-center" style={{ transitionDelay: '300ms' }}>
-            <h3 className="text-5xl font-bold text-bizsimpl-700 mb-4">500+</h3>
+            <h3 className="text-5xl font-bold text-purple-700 mb-4">500+</h3>
             <p className="text-gray-600 text-lg">Happy Customers</p>
           </div>
         </div>

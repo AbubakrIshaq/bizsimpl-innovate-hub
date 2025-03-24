@@ -72,6 +72,19 @@ export default {
 					secondary: '#0EA5E9',  // Cobalt blue
 					tertiary: '#FFFFFF',   // White
 					purple: '#7B0DC4',     // BizSimpl purple (from logo)
+				},
+				purple: {
+					50: '#faf5ff',
+					100: '#f3e8ff',
+					200: '#e9d5ff',
+					300: '#d8b4fe',
+					400: '#c084fc',
+					500: '#a855f7',
+					600: '#9333ea',
+					700: '#7709c7',  // BizSimpl brand purple
+					800: '#6b21a8',
+					900: '#581c87',
+					950: '#3b0764',
 				}
 			},
 			borderRadius: {
@@ -146,7 +159,7 @@ export default {
 				'gradient-rust': 'linear-gradient(90deg, #B85042 0%, #d46e60 100%)',
 				'gradient-navy': 'linear-gradient(90deg, #1A2C56 0%, #2d4272 100%)',
 				'gradient-cobalt': 'linear-gradient(90deg, #0EA5E9 0%, #38bdf8 100%)',
-				'gradient-purple': 'linear-gradient(90deg, #7B0DC4 0%, #9B3DE0 100%)',
+				'gradient-purple': 'linear-gradient(90deg, #7709c7 0%, #9B3DE0 100%)',
 			},
 		}
 	},
