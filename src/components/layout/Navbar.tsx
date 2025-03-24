@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
@@ -39,15 +38,14 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Text Logo */}
+          {/* Logo Image */}
           <Link to="/" className="flex items-center">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold">
-                <span className="text-primary">Biz</span>
-                <span className="text-secondary">simpl</span>
-              </h1>
-              <span className="sr-only">BizSimpl</span>
-            </div>
+            <img 
+              src="/lovable-uploads/bizsimpl-logo.png" 
+              alt="BizSimpl Startup" 
+              className="h-10"
+            />
+            <span className="sr-only">BizSimpl Startup</span>
           </Link>
 
           {/* Desktop Navigation - Centered */}

@@ -68,7 +68,7 @@ const Hero = () => {
           </span>
           
           <h1 className="reveal text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight text-balance mb-6">
-            Launch Your Business In India from <span className="text-gradient">Anywhere Across the World</span>
+            Your Business <span className="text-gradient">Launchpad</span>
           </h1>
           
           <p className="reveal text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
