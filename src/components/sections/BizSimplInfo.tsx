@@ -1,6 +1,5 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Building, Briefcase, UserRound } from 'lucide-react';
 import { CustomCard } from '../ui/CustomCard';
 
 const BizSimplInfo = () => {
@@ -33,37 +32,18 @@ const BizSimplInfo = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
               What is BizSimplStartup?
             </h2>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-gray-600 mb-10">
               BizSimplStartup is a platform dedicated to empowering entrepreneurs in launching their businesses. We offer free consultations to help founders choose the right business structure - Private Limited Company (Pvt Ltd), Limited Liability Partnership (LLP), or One Person Company (OPC) - as well as assist in their formation and registration, ensuring a smooth and hassle-free process.
             </p>
-            
-            {/* Stats moved beside the paragraph */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              <div className="text-center">
-                <h3 className="text-4xl font-bold text-secondary mb-2">1000+</h3>
-                <p className="text-gray-600">Founders in the Community</p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-4xl font-bold text-secondary mb-2">5000+</h3>
-                <p className="text-gray-600">Company Registrations</p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-4xl font-bold text-secondary mb-2">11</h3>
-                <p className="text-gray-600">Startup Success Stories</p>
-              </div>
-            </div>
           </div>
           
-          {/* Right column - Business Structure Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Right column - Stats Cards */}
+          <div className="grid grid-cols-2 gap-4">
             <div className="reveal" style={{ transitionDelay: '0ms' }}>
               <CustomCard className="h-full">
                 <div className="flex flex-col items-center text-center p-4">
-                  <div className="mb-4 p-3 bg-blue-50 rounded-full">
-                    <Building className="h-6 w-6 text-blue-500" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900">Private Limited Company</h3>
-                  <p className="text-gray-600 text-sm">Ideal for startups and businesses with growth potential who want to raise funds and offer ESOPs.</p>
+                  <h3 className="text-3xl font-bold text-secondary mb-2">400+</h3>
+                  <p className="text-gray-600 text-sm">Businesses trust us</p>
                 </div>
               </CustomCard>
             </div>
@@ -71,11 +51,8 @@ const BizSimplInfo = () => {
             <div className="reveal" style={{ transitionDelay: '100ms' }}>
               <CustomCard className="h-full">
                 <div className="flex flex-col items-center text-center p-4">
-                  <div className="mb-4 p-3 bg-blue-50 rounded-full">
-                    <Briefcase className="h-6 w-6 text-blue-500" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900">Limited Liability Partnership</h3>
-                  <p className="text-gray-600 text-sm">Perfect for professional services with fewer compliance requirements but limited liability protection.</p>
+                  <h3 className="text-3xl font-bold text-secondary mb-2">500+</h3>
+                  <p className="text-gray-600 text-sm">Businesses Incorporated</p>
                 </div>
               </CustomCard>
             </div>
@@ -83,11 +60,17 @@ const BizSimplInfo = () => {
             <div className="reveal" style={{ transitionDelay: '200ms' }}>
               <CustomCard className="h-full">
                 <div className="flex flex-col items-center text-center p-4">
-                  <div className="mb-4 p-3 bg-blue-50 rounded-full">
-                    <UserRound className="h-6 w-6 text-blue-500" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900">One Person Company</h3>
-                  <p className="text-gray-600 text-sm">Suitable for solo entrepreneurs who want limited liability with single ownership.</p>
+                  <h3 className="text-3xl font-bold text-secondary mb-2">96%</h3>
+                  <p className="text-gray-600 text-sm">Success Rate</p>
+                </div>
+              </CustomCard>
+            </div>
+            
+            <div className="reveal" style={{ transitionDelay: '300ms' }}>
+              <CustomCard className="h-full">
+                <div className="flex flex-col items-center text-center p-4">
+                  <h3 className="text-3xl font-bold text-secondary mb-2">10+</h3>
+                  <p className="text-gray-600 text-sm">Years Of Experience</p>
                 </div>
               </CustomCard>
             </div>

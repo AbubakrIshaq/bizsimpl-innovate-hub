@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
 import { ArrowRight } from 'lucide-react';
-import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
 
 const companyLogos = [
   { name: 'Facebook', logo: '/logos/facebook.svg' },
@@ -77,10 +76,10 @@ const Hero = () => {
       {/* Wider company logo carousel with movement */}
       <div className="reveal w-full mt-auto">
         <p className="text-sm text-gray-500 mb-3 text-center">Trusted by innovative businesses</p>
-        <div className="w-full max-w-5xl mx-auto overflow-hidden py-4">
+        <div className="w-full max-w-6xl mx-auto overflow-hidden py-4">
           <div className="logo-scroll">
             {[...companyLogos, ...companyLogos, ...companyLogos].map((company, index) => (
-              <div key={index} className="logo-item mx-8">
+              <div key={index} className="logo-item mx-6">
                 <div className="h-5 px-3 bg-gray-200/70 rounded-md flex items-center justify-center text-xs text-gray-500 font-medium">
                   {company.name}
                 </div>
