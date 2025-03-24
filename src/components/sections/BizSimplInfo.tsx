@@ -33,7 +33,7 @@ const BizSimplInfo = () => {
               What is BizSimpl <span className="ml-1">Startup</span>?
             </h2>
             <p className="text-lg text-gray-600 mb-10">
-              BizSimpl Startup is a platform dedicated to empowering entrepreneurs in launching their businesses. We offer free consultations to help founders choose the right business structure - Private Limited Company (Pvt Ltd), Limited Liability Partnership (LLP), or One Person Company (OPC) - as well as assist in their formation and registration, ensuring a smooth and hassle-free process.
+              BizSimpl Startup is a platform dedicated to empowering entrepreneurs in launching their businesses. We offer free consultations to help founders choose the right business structure, as well as assist in their formation and registration, ensuring a smooth and hassle-free process.
             </p>
           </div>
           

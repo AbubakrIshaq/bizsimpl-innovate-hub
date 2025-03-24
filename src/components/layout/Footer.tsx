@@ -51,7 +51,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <div className="text-gray-600 mb-6 max-w-md">
-              <p className="mb-6 font-bold">Head Office Address</p>
+              <p className="mb-6 font-bold text-base">Head Office Address</p>
               <p className="mb-6">Indiqube Penta, 32, Shanthala Nagar, Richmond Town, Bengaluru, Karnataka 560025.</p>
               <p>CIN NO : U74999KA2022PTC168801</p>
             </div>
