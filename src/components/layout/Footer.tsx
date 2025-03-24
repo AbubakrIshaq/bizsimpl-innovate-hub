@@ -48,14 +48,16 @@ const Footer = () => {
     <footer className="bg-gray-50">
       <div className="container mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {/* Logo and Company Info */}
+          {/* Company Info */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <div className="flex items-center mb-4">
               <span className="text-xl font-bold text-bizsimpl-950">Biz<span className="text-bizsimpl-600">simpl</span></span>
             </div>
-            <p className="text-gray-600 mb-6 max-w-md">
-              We provide comprehensive guidance to entrepreneurs in choosing the right business structure in India. From founder-friendly private limited companies to efficient LLPs and OPCs, we offer tailored solutions with our expertise. Trust BizSimpl to simplify your startup journey.
-            </p>
+            <div className="text-gray-600 mb-6 max-w-md">
+              <p className="mb-6">Head Office Address</p>
+              <p className="mb-6">Indiqube Penta, 32, Shanthala Nagar, Richmond Town, Bengaluru, Karnataka 560025.</p>
+              <p>CIN NO : U74999KA2022PTC168801</p>
+            </div>
             <div className="space-y-3">
               <p className="text-sm text-gray-500">
                 <span className="font-medium">Email:</span> hello@bizsimpl.com

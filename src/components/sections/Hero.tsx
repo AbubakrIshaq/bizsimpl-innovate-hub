@@ -74,13 +74,13 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Shorter company logo carousel with reduced spacing */}
-      <div className="reveal w-full mt-auto px-6 lg:px-8">
+      {/* Wider company logo carousel with movement */}
+      <div className="reveal w-full mt-auto">
         <p className="text-sm text-gray-500 mb-3 text-center">Trusted by innovative businesses</p>
-        <div className="w-full max-w-4xl mx-auto overflow-hidden bg-white/50 py-4 px-4 rounded-lg">
-          <div className="flex justify-center items-center space-x-6 md:space-x-8">
-            {companyLogos.map((company, index) => (
-              <div key={index} className="flex items-center justify-center h-8">
+        <div className="w-full max-w-5xl mx-auto overflow-hidden py-4">
+          <div className="logo-scroll">
+            {[...companyLogos, ...companyLogos, ...companyLogos].map((company, index) => (
+              <div key={index} className="logo-item mx-8">
                 <div className="h-5 px-3 bg-gray-200/70 rounded-md flex items-center justify-center text-xs text-gray-500 font-medium">
                   {company.name}
                 </div>

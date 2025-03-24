@@ -38,20 +38,12 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo Image */}
           <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/bizsimpl-logo.png" 
-              alt="BizSimpl Startup" 
-              className="h-10"
-            />
-            <span className="sr-only">BizSimpl Startup</span>
+            <span className="text-xl font-bold text-bizsimpl-950">Biz<span className="text-bizsimpl-600">simpl</span></span>
           </Link>
 
-          {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center justify-center flex-grow mx-auto">
             <div className="flex items-center space-x-1">
-              {/* Company Registration Dropdown */}
               <div className="relative px-3 py-2">
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex items-center text-sm font-medium text-gray-700 hover:text-secondary transition-colors rounded-md focus:outline-none">
@@ -90,7 +82,6 @@ const Navbar = () => {
                 </DropdownMenu>
               </div>
               
-              {/* Other Navigation Links */}
               {navLinks.map((link) => (
                 <Link 
                   key={link.name}
@@ -103,7 +94,6 @@ const Navbar = () => {
             </div>
           </nav>
 
-          {/* Register Button */}
           <div className="hidden md:block">
             <Link to="/registration">
               <CustomButton size="md" className="whitespace-nowrap">
@@ -112,7 +102,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="inline-flex md:hidden items-center justify-center p-2 rounded-md text-gray-700 hover:text-secondary hover:bg-gray-100 transition-colors"
@@ -122,10 +111,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div className={`md:hidden transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-6 pt-2 pb-4 space-y-1 bg-white border-t border-gray-100">
-          {/* Company Registration Dropdown for Mobile */}
           <div className="block">
             <Collapsible>
               <CollapsibleTrigger className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 rounded-md">
@@ -161,7 +148,6 @@ const Navbar = () => {
             </Collapsible>
           </div>
           
-          {/* Other Nav Links for Mobile */}
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -173,7 +159,6 @@ const Navbar = () => {
             </Link>
           ))}
           
-          {/* Mobile Register Button */}
           <div className="pt-2">
             <Link
               to="/registration"

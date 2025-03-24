@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ChevronLeft, Phone, Check } from 'lucide-react';
+import { ChevronLeft, User, Phone, Mail, Check } from 'lucide-react';
 import { CustomButton } from '@/components/ui/CustomButton';
 
 const Registration = () => {
+  const [fullName, setFullName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -94,23 +96,41 @@ const Registration = () => {
               </button>
               <div className="bg-bizsimpl-600 rounded-lg p-2">
                 <div className="h-10 w-10 flex items-center justify-center bg-bizsimpl-600 text-white rounded-md">
-                  <Phone className="h-5 w-5" />
+                  <User className="h-5 w-5" />
                 </div>
               </div>
             </div>
 
-            <div className="mb-8">
+            <div className="mb-6">
               <h1 className="text-2xl font-bold mb-2">Welcome to Bizsimpl Incorporation</h1>
               <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                Get started with your phone number
+                Register your business
               </h2>
             </div>
 
-            <form onSubmit={handleSubmit}>
-              <div className="mb-6">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Full Name Input */}
+              <div>
                 <div className="flex">
                   <div className="inline-flex items-center px-3 py-2 bg-gray-100 border border-r-0 border-gray-300 rounded-l-md">
-                    <span className="text-gray-500 font-medium">+91</span>
+                    <User className="h-5 w-5 text-gray-500" />
+                  </div>
+                  <Input
+                    type="text"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    placeholder="Enter your name"
+                    className="rounded-l-none py-6"
+                    required
+                  />
+                </div>
+              </div>
+              
+              {/* Phone Number Input */}
+              <div>
+                <div className="flex">
+                  <div className="inline-flex items-center px-3 py-2 bg-gray-100 border border-r-0 border-gray-300 rounded-l-md">
+                    <Phone className="h-5 w-5 text-gray-500" />
                   </div>
                   <Input
                     type="tel"
@@ -125,10 +145,27 @@ const Registration = () => {
                 </div>
               </div>
               
+              {/* Email Input */}
+              <div>
+                <div className="flex">
+                  <div className="inline-flex items-center px-3 py-2 bg-gray-100 border border-r-0 border-gray-300 rounded-l-md">
+                    <Mail className="h-5 w-5 text-gray-500" />
+                  </div>
+                  <Input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    className="rounded-l-none py-6"
+                    required
+                  />
+                </div>
+              </div>
+              
               <Button 
                 type="submit" 
-                className="w-full py-6 bg-bizsimpl-600 hover:bg-bizsimpl-700"
-                disabled={isLoading || phoneNumber.length !== 10}
+                className="w-full py-6 bg-bizsimpl-600 hover:bg-bizsimpl-700 mt-4"
+                disabled={isLoading || !fullName || phoneNumber.length !== 10 || !email}
               >
                 {isLoading ? 'Processing...' : 'Continue'}
               </Button>

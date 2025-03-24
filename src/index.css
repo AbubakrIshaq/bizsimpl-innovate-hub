@@ -97,8 +97,8 @@
   
   /* Logo carousel animation */
   .logo-scroll {
-    @apply flex animate-scroll gap-x-1;
-    width: calc(250px * 15); /* Ensure it's wide enough to display all logos */
+    @apply flex animate-scroll gap-x-4;
+    width: calc(250px * 18); /* Making the carousel wider */
   }
   
   .logo-item {
@@ -139,10 +139,10 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 9)); /* Adjust this to make it smoother */
   }
 }
 
 .animate-scroll {
-  animation: scroll 15s linear infinite;
+  animation: scroll 25s linear infinite; /* Slowed down the animation */
 }
