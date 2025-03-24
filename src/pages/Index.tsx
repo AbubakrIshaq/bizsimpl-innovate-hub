@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
-import Services from '@/components/sections/Services';
+import BizSimplInfo from '@/components/sections/BizSimplInfo';
 import Registration from '@/components/sections/Registration';
 import Benefits from '@/components/sections/Benefits';
 import Testimonials from '@/components/sections/Testimonials';
@@ -39,7 +39,7 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <Services />
+        <BizSimplInfo />
         <Registration />
         <Benefits />
         <Testimonials />

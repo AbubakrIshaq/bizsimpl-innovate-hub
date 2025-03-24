@@ -20,17 +20,6 @@ const Registration = () => {
             </p>
           </div>
 
-          {/* CTA Button for Small Screens */}
-          <div className="flex justify-center mb-12 lg:hidden">
-            <Link to="/registration">
-              <CustomButton 
-                className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-8 py-4 rounded-lg text-lg"
-              >
-                Register your Business
-              </CustomButton>
-            </Link>
-          </div>
-
           {/* Company Types Grid */}
           <div className="space-y-10">
             {/* Private Limited Company */}
@@ -131,17 +120,6 @@ const Registration = () => {
                 </Link>
               </div>
             </div>
-          </div>
-
-          {/* CTA Button for Large Screens */}
-          <div className="hidden lg:flex justify-end mt-12">
-            <Link to="/registration">
-              <CustomButton 
-                className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-8 py-3 rounded-lg text-lg"
-              >
-                Register your Business
-              </CustomButton>
-            </Link>
           </div>
         </div>
       </div>

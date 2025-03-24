@@ -92,12 +92,12 @@
   
   /* Logo carousel animation */
   .logo-scroll {
-    @apply flex animate-scroll;
+    @apply flex animate-scroll gap-x-1;
     width: calc(250px * 15); /* Ensure it's wide enough to display all logos */
   }
   
   .logo-item {
-    @apply flex-shrink-0 flex items-center justify-center p-2 transition-all duration-300 grayscale hover:grayscale-0;
+    @apply flex-shrink-0 flex items-center justify-center p-1 transition-all duration-300 grayscale hover:grayscale-0;
   }
   
   /* Logo styling */

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
@@ -20,7 +21,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const navLinks = [
-    { name: 'Features', href: '/features' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Benefits', href: '/benefits' },
     { name: 'Pricing', href: '/pricing' }
   ];
@@ -104,8 +105,14 @@ const Navbar = () => {
             </div>
           </nav>
 
-          {/* Placeholder div to balance the navbar */}
-          <div className="hidden md:block w-[100px]"></div>
+          {/* Register Button */}
+          <div className="hidden md:block">
+            <Link to="/registration">
+              <CustomButton size="md" className="whitespace-nowrap">
+                Register your Business
+              </CustomButton>
+            </Link>
+          </div>
 
           {/* Mobile Menu Button */}
           <button 
@@ -167,6 +174,19 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
+          
+          {/* Mobile Register Button */}
+          <div className="pt-2">
+            <Link
+              to="/registration"
+              className="block w-full"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <CustomButton className="w-full">
+                Register your Business
+              </CustomButton>
+            </Link>
+          </div>
         </div>
       </div>
     </header>

@@ -63,19 +63,19 @@ const Hero = () => {
       {/* Main content section */}
       <div className="container mx-auto px-6 lg:px-8 mb-16">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block reveal reveal-up px-4 py-2 mb-6 rounded-full bg-bizsimpl-50 text-bizsimpl-700 text-sm font-medium">
+          <span className="inline-block reveal px-4 py-2 mb-6 rounded-full bg-bizsimpl-50 text-bizsimpl-700 text-sm font-medium">
             Simplified Business Registration & Compliance
           </span>
           
-          <h1 className="reveal reveal-up text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight text-balance mb-6">
-            Streamline your <span className="text-gradient">business journey</span> with seamless registration
+          <h1 className="reveal text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight text-balance mb-6">
+            Launch Your Business In India from <span className="text-gradient">Anywhere Across the World</span>
           </h1>
           
-          <p className="reveal reveal-up text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+          <p className="reveal text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             One platform to register, manage and grow your business. Say goodbye to paperwork and hello to efficiency.
           </p>
           
-          <div className="reveal reveal-up flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <div className="reveal flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <CustomButton size="lg" className="w-full sm:w-auto" onClick={handleGetStarted}>
               Get Started <ArrowRight size={16} className="ml-2" />
             </CustomButton>
@@ -84,7 +84,7 @@ const Hero = () => {
       </div>
       
       {/* Full-width company logo carousel */}
-      <div className="reveal reveal-up w-full mt-auto">
+      <div className="reveal w-full mt-auto px-6 lg:px-8">
         <p className="text-sm text-gray-500 mb-3 text-center">Trusted by innovative businesses</p>
         <div className="w-full overflow-hidden">
           <Carousel 
@@ -95,7 +95,7 @@ const Hero = () => {
             }}
             className="w-full"
           >
-            <CarouselContent className="py-4 logo-scroll">
+            <CarouselContent className="py-4 logo-scroll gap-x-3">
               {companyLogos.map((company, index) => (
                 <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 logo-item">
                   <div className="flex items-center justify-center h-10 mx-auto">
