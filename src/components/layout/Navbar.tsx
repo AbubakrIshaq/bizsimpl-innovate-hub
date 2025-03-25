@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
@@ -43,7 +42,7 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/1f646fc7-0cab-4348-bd28-99c2a8d3bd5f.png" 
               alt="BizSimpl Logo" 
-              className="h-8 w-8" 
+              className="h-8 w-8 object-contain" 
             />
             <span className="text-xl font-bold text-purple-700" style={{ fontFamily: 'Arial, sans-serif' }}>
               BizSimpl <span className="ml-1">Startup</span>
@@ -54,14 +53,14 @@ const Navbar = () => {
             <div className="flex items-center space-x-1">
               <div className="relative px-3 py-2">
                 <DropdownMenu>
-                  <DropdownMenuTrigger className="flex items-center text-sm font-medium text-gray-700 hover:text-secondary transition-colors rounded-md focus:outline-none">
+                  <DropdownMenuTrigger className="flex items-center text-sm font-medium text-gray-700 hover:text-purple-700 transition-colors rounded-md focus:outline-none">
                     Company Registration
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-72 bg-white">
                     <Link to="/private-limited">
                       <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
-                        <Building className="h-5 w-5 text-secondary" />
+                        <Building className="h-5 w-5 text-purple-700" />
                         <div>
                           <div className="font-medium">Private Limited Company</div>
                           <div className="text-xs text-gray-500">Register your business as a private limited company</div>
@@ -70,7 +69,7 @@ const Navbar = () => {
                     </Link>
                     <Link to="/llp">
                       <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
-                        <Briefcase className="h-5 w-5 text-secondary" />
+                        <Briefcase className="h-5 w-5 text-purple-700" />
                         <div>
                           <div className="font-medium">Limited Liability Partnership</div>
                           <div className="text-xs text-gray-500">Form a partnership with limited liability</div>
@@ -79,7 +78,7 @@ const Navbar = () => {
                     </Link>
                     <Link to="/one-person-company">
                       <DropdownMenuItem className="flex items-center gap-2 py-3 cursor-pointer">
-                        <UserRound className="h-5 w-5 text-secondary" />
+                        <UserRound className="h-5 w-5 text-purple-700" />
                         <div>
                           <div className="font-medium">One Person Company</div>
                           <div className="text-xs text-gray-500">Start a company with a single director</div>
@@ -94,7 +93,7 @@ const Navbar = () => {
                 <Link 
                   key={link.name}
                   to={link.href}
-                  className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-secondary transition-colors rounded-md"
+                  className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-purple-700 transition-colors rounded-md"
                 >
                   {link.name}
                 </Link>
@@ -104,7 +103,7 @@ const Navbar = () => {
 
           <div className="hidden md:block">
             <Link to="/registration">
-              <CustomButton size="md" className="whitespace-nowrap">
+              <CustomButton size="md" className="whitespace-nowrap bg-purple-700 hover:bg-purple-800">
                 Register your Business
               </CustomButton>
             </Link>
@@ -112,7 +111,7 @@ const Navbar = () => {
 
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="inline-flex md:hidden items-center justify-center p-2 rounded-md text-gray-700 hover:text-secondary hover:bg-gray-100 transition-colors"
+            className="inline-flex md:hidden items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-700 hover:bg-gray-100 transition-colors"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -123,14 +122,14 @@ const Navbar = () => {
         <div className="px-6 pt-2 pb-4 space-y-1 bg-white border-t border-gray-100">
           <div className="block">
             <Collapsible>
-              <CollapsibleTrigger className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 rounded-md">
+              <CollapsibleTrigger className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50 rounded-md">
                 Company Registration
                 <ChevronDown className="h-4 w-4" />
               </CollapsibleTrigger>
               <CollapsibleContent className="pl-4 space-y-1 mt-1">
                 <Link
                   to="/private-limited"
-                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 rounded-md"
+                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <Building className="h-4 w-4" />
@@ -138,7 +137,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   to="/llp"
-                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 rounded-md"
+                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <Briefcase className="h-4 w-4" />
@@ -146,7 +145,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   to="/one-person-company"
-                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 rounded-md"
+                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50 rounded-md"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <UserRound className="h-4 w-4" />
@@ -160,7 +159,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.href}
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-700 hover:bg-gray-50 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
@@ -173,7 +172,7 @@ const Navbar = () => {
               className="block w-full"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <CustomButton className="w-full">
+              <CustomButton className="w-full bg-purple-700 hover:bg-purple-800">
                 Register your Business
               </CustomButton>
             </Link>

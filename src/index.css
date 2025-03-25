@@ -17,13 +17,13 @@
     --primary: 222 47% 25%;     /* Navy blue */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 199 89% 48%;   /* Cobalt blue */
+    --secondary: 273 90% 40%;   /* Purple - Matching BizSimpl logo */
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 40% 96%;
     --muted-foreground: 215 25% 35%;
 
-    --accent: 199 89% 48%;      /* Cobalt blue */
+    --accent: 273 90% 40%;      /* Purple - Matching BizSimpl logo */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -31,7 +31,7 @@
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 222 47% 25%;
+    --ring: 273 90% 40%;
 
     --radius: 0.75rem;
     
@@ -41,7 +41,7 @@
   }
  
   * {
-    @apply border-border selection:bg-secondary selection:text-white;
+    @apply border-border selection:bg-purple-700 selection:text-white;
   }
   
   html {
@@ -81,7 +81,7 @@
   }
 
   .bg-registration {
-    @apply bg-gradient-cobalt;
+    @apply bg-gradient-purple;
   }
 }
 

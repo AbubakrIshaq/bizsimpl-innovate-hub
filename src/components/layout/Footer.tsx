@@ -18,10 +18,9 @@ const Footer = () => {
     {
       title: 'Solutions',
       links: [
-        { name: 'Company Registration', href: '/private-limited' },
-        { name: 'Business Management', href: '/solutions/business-management' },
-        { name: 'Compliance', href: '/solutions/compliance' },
-        { name: 'Taxation', href: '/solutions/taxation' }
+        { name: 'Private Limited Company', href: '/private-limited' },
+        { name: 'Limited Liability Partnership', href: '/llp' },
+        { name: 'One Person Company', href: '/one-person-company' }
       ]
     },
     {
