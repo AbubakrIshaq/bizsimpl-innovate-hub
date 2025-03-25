@@ -46,19 +46,19 @@ const Hero = () => {
     >
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-gradient-radial from-bizsimpl-100/50 to-transparent opacity-60"></div>
-        <div className="absolute bottom-0 left-0 w-[50%] h-[50%] bg-gradient-radial from-bizsimpl-50/50 to-transparent opacity-60"></div>
+        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-gradient-radial from-purple-100/50 to-transparent opacity-60"></div>
+        <div className="absolute bottom-0 left-0 w-[50%] h-[50%] bg-gradient-radial from-purple-50/50 to-transparent opacity-60"></div>
       </div>
       
       {/* Main content section */}
       <div className="container mx-auto px-6 lg:px-8 mb-16">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block reveal px-4 py-2 mb-6 rounded-full bg-bizsimpl-50 text-bizsimpl-700 text-sm font-medium">
+          <span className="inline-block reveal px-4 py-2 mb-6 rounded-full bg-purple-50 text-purple-700 text-sm font-medium">
             Simplified Business Registration & Compliance
           </span>
           
           <h1 className="reveal text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight text-balance mb-6">
-            Your Business <span className="text-gradient">Launchpad</span>
+            Your Business <span className="text-gradient-purple">Launchpad</span>
           </h1>
           
           <p className="reveal text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
@@ -66,7 +66,7 @@ const Hero = () => {
           </p>
           
           <div className="reveal flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <CustomButton size="lg" className="w-full sm:w-auto" onClick={handleGetStarted}>
+            <CustomButton size="lg" className="w-full sm:w-auto bg-purple-700 hover:bg-purple-800" onClick={handleGetStarted}>
               Get Started <ArrowRight size={16} className="ml-2" />
             </CustomButton>
           </div>

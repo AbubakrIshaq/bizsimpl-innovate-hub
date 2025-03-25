@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Registration = () => {
   return (
-    <section id="registration" className="py-20 bg-gradient-navy text-white">
+    <section id="registration" className="py-20 bg-purple-800 text-white">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -25,7 +25,7 @@ const Registration = () => {
             {/* Private Limited Company */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-3">
-                <div className="bg-primary/20 p-4 rounded-xl border border-primary/30 w-full max-w-[280px] mx-auto">
+                <div className="bg-purple-700/30 p-4 rounded-xl border border-purple-700/30 w-full max-w-[280px] mx-auto">
                   <img 
                     src="/lovable-uploads/4d5c8007-13e5-4050-b52e-f49d3b648caf.png" 
                     alt="Private Limited Company" 
@@ -58,7 +58,7 @@ const Registration = () => {
             {/* Limited Liability Partnership */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-3">
-                <div className="bg-primary/20 p-4 rounded-xl border border-primary/30 w-full max-w-[280px] mx-auto">
+                <div className="bg-purple-700/30 p-4 rounded-xl border border-purple-700/30 w-full max-w-[280px] mx-auto">
                   <img 
                     src="/lovable-uploads/21291dda-bdff-4eb0-8724-4dbd27ea553f.png" 
                     alt="Limited Liability Partnership" 
@@ -91,7 +91,7 @@ const Registration = () => {
             {/* One Person Company */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-3">
-                <div className="bg-primary/20 p-4 rounded-xl border border-primary/30 w-full max-w-[280px] mx-auto">
+                <div className="bg-purple-700/30 p-4 rounded-xl border border-purple-700/30 w-full max-w-[280px] mx-auto">
                   <img 
                     src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=360&h=360&crop=entropy" 
                     alt="One Person Company" 

@@ -90,7 +90,7 @@ const Testimonials = () => {
             
             <div className="text-center">
               <div className="font-semibold text-gray-900">{testimonials[currentIndex].author}</div>
-              <div className="text-purple-600 text-sm">{testimonials[currentIndex].position}</div>
+              <div className="text-purple-700 text-sm">{testimonials[currentIndex].position}</div>
             </div>
           </CustomCard>
           
@@ -108,7 +108,7 @@ const Testimonials = () => {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`h-2.5 rounded-full transition-all ${
-                    index === currentIndex ? 'w-8 bg-purple-600' : 'w-2.5 bg-purple-200'
+                    index === currentIndex ? 'w-8 bg-purple-700' : 'w-2.5 bg-purple-200'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />

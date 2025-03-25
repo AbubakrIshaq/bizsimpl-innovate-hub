@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
@@ -42,10 +43,10 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/1f646fc7-0cab-4348-bd28-99c2a8d3bd5f.png" 
               alt="BizSimpl Logo" 
-              className="h-8 w-8 object-contain" 
+              className="h-10 w-10 object-contain" 
             />
             <span className="text-xl font-bold text-purple-700" style={{ fontFamily: 'Arial, sans-serif' }}>
-              BizSimpl <span className="ml-1">Startup</span>
+              BizSimpl<span className="ml-0.5">Startup</span>
             </span>
           </Link>
 

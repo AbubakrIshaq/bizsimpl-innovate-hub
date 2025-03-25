@@ -81,7 +81,7 @@
   }
 
   .bg-registration {
-    @apply bg-gradient-purple;
+    @apply bg-purple-800;
   }
 }
 
