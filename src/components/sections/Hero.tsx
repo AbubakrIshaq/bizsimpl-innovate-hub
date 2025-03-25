@@ -58,7 +58,7 @@ const Hero = () => {
           </span>
           
           <h1 className="reveal text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight text-balance mb-6">
-            Your Business <span className="text-gradient-purple">Launchpad</span>
+            Your Business <span className="text-black">Launchpad</span>
           </h1>
           
           <p className="reveal text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
@@ -66,7 +66,7 @@ const Hero = () => {
           </p>
           
           <div className="reveal flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <CustomButton size="lg" className="w-full sm:w-auto bg-purple-700 hover:bg-purple-800" onClick={handleGetStarted}>
+            <CustomButton size="lg" className="w-full sm:w-auto bg-white text-purple-700 border border-purple-700 hover:bg-purple-50" onClick={handleGetStarted}>
               Get Started <ArrowRight size={16} className="ml-2" />
             </CustomButton>
           </div>

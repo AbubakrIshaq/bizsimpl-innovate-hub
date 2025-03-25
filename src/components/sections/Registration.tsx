@@ -13,7 +13,7 @@ const Registration = () => {
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="text-white">Hassle-free </span>
-              <span className="text-yellow-200">Company Registrations</span>
+              <span className="text-white">Company Registrations</span>
             </h2>
             <p className="text-xl text-white/80">
               Choose from the most popular company types and get seamless registration at No Hidden Charges
