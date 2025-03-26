@@ -36,7 +36,7 @@ const Registration = () => {
         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')" }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 flex flex-col justify-between p-12 text-white">
           <div>
-            <span className="text-xl font-bold text-white">Biz<span className="text-purple-700">simpl</span></span>
+            {/* Removed Bizsimpl name as requested */}
           </div>
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">
@@ -46,19 +46,19 @@ const Registration = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="bg-purple-700/20 p-2 rounded-full">
-                  <Check className="h-4 w-4 text-purple-700" />
+                  <Check className="h-4 w-4 text-white" />
                 </div>
                 <p>Affordable Pricing</p>
               </div>
               <div className="flex items-center gap-3">
                 <div className="bg-purple-700/20 p-2 rounded-full">
-                  <Check className="h-4 w-4 text-purple-700" />
+                  <Check className="h-4 w-4 text-white" />
                 </div>
                 <p>Best-in-Industry Support</p>
               </div>
               <div className="flex items-center gap-3">
                 <div className="bg-purple-700/20 p-2 rounded-full">
-                  <Check className="h-4 w-4 text-purple-700" />
+                  <Check className="h-4 w-4 text-white" />
                 </div>
                 <p>Easy Tracking via Dashboard</p>
               </div>
@@ -75,7 +75,7 @@ const Registration = () => {
           <div className="container mx-auto">
             <div className="flex items-center justify-between">
               <div className="flex items-center">
-                <span className="text-xl font-bold text-purple-950">Biz<span className="text-purple-700">simpl</span></span>
+                {/* Removed Bizsimpl name as requested */}
               </div>
               <CustomButton variant="outline" size="sm">
                 Need Help?
