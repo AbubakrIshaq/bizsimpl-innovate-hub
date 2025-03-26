@@ -75,7 +75,7 @@ const Hero = () => {
       
       {/* Wider company logo carousel with movement */}
       <div className="reveal w-full mt-auto">
-        <p className="text-sm text-gray-500 mb-3 text-center">Trusted by innovative businesses</p>
+        <p className="text-base font-bold text-gray-700 mb-3 text-center">Trusted by innovative businesses</p>
         <div className="w-full max-w-6xl mx-auto overflow-hidden py-4">
           <div className="logo-scroll">
             {[...companyLogos, ...companyLogos, ...companyLogos].map((company, index) => (

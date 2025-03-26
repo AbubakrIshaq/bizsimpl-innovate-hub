@@ -26,22 +26,22 @@ const Services = () => {
 
   const services = [
     {
-      icon: <FileText className="h-8 w-8 text-bizsimpl-600" />,
+      icon: <FileText className="h-8 w-8 text-purple-700" />,
       title: 'Company Registration',
       description: 'Register your business quickly and easily with our streamlined process.',
     },
     {
-      icon: <UserPlus className="h-8 w-8 text-bizsimpl-600" />,
+      icon: <UserPlus className="h-8 w-8 text-purple-700" />,
       title: 'Director Identification',
       description: 'Simplified KYC process for director verification and authentication.',
     },
     {
-      icon: <ShieldCheck className="h-8 w-8 text-bizsimpl-600" />,
+      icon: <ShieldCheck className="h-8 w-8 text-purple-700" />,
       title: 'Compliance Management',
       description: 'Stay compliant with automated reminders and expert guidance.',
     },
     {
-      icon: <RefreshCw className="h-8 w-8 text-bizsimpl-600" />,
+      icon: <RefreshCw className="h-8 w-8 text-purple-700" />,
       title: 'Annual Renewals',
       description: 'Hassle-free renewals with timely notifications and assistance.',
     },
@@ -51,10 +51,10 @@ const Services = () => {
     <section ref={servicesRef} className="py-20 bg-white" id="services">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="reveal reveal-up inline-block px-3 py-1 mb-4 text-sm font-medium text-bizsimpl-700 bg-bizsimpl-50 rounded-full">
+          <span className="reveal reveal-up inline-block px-3 py-1 mb-4 text-sm font-medium text-purple-700 bg-purple-50 rounded-full">
             Our Services
           </span>
-          <h2 className="reveal reveal-up text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="reveal reveal-up text-3xl md:text-4xl font-bold text-purple-700 mb-6">
             Everything you need to manage your business
           </h2>
           <p className="reveal reveal-up text-lg text-gray-600">
@@ -74,7 +74,7 @@ const Services = () => {
                 isHoverable 
                 className="h-full flex flex-col items-center text-center"
               >
-                <div className="mb-6 p-4 bg-bizsimpl-50 rounded-full">
+                <div className="mb-6 p-4 bg-purple-50 rounded-full">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">{service.title}</h3>
