@@ -104,7 +104,7 @@ const Navbar = () => {
 
           <div className="hidden md:block">
             <Link to="/registration">
-              <CustomButton size="md" className="whitespace-nowrap bg-white text-purple-700 border border-purple-700 hover:bg-purple-50">
+              <CustomButton size="md" className="whitespace-nowrap bg-purple-700 text-white hover:bg-purple-800">
                 Register your Business
               </CustomButton>
             </Link>
@@ -173,7 +173,7 @@ const Navbar = () => {
               className="block w-full"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <CustomButton className="w-full bg-white text-purple-700 border border-purple-700 hover:bg-purple-50">
+              <CustomButton className="w-full bg-purple-700 text-white hover:bg-purple-800">
                 Register your Business
               </CustomButton>
             </Link>

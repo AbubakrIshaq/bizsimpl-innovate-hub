@@ -4,7 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { CustomButton } from '@/components/ui/CustomButton';
 import { motion } from 'framer-motion';
-import { Check, HelpCircle, Clock, Shield, FileText, Users } from 'lucide-react';
+import { Check, HelpCircle, Clock, Shield, FileText, Users, Building, Briefcase, UserCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
   Tabs,
@@ -24,6 +24,7 @@ const Pricing = () => {
       basePrice: 7999,
       govtFees: 'Additional',
       processingTime: '10-15 working days',
+      icon: <Building className="h-6 w-6 text-purple-700" />,
       packages: [
         {
           name: 'Basic',
@@ -70,6 +71,7 @@ const Pricing = () => {
       basePrice: 6999,
       govtFees: 'Additional',
       processingTime: '12-18 working days',
+      icon: <Briefcase className="h-6 w-6 text-purple-700" />,
       packages: [
         {
           name: 'Basic',
@@ -116,6 +118,7 @@ const Pricing = () => {
       basePrice: 7499,
       govtFees: 'Additional',
       processingTime: '10-15 working days',
+      icon: <UserCircle className="h-6 w-6 text-purple-700" />,
       packages: [
         {
           name: 'Basic',
@@ -225,6 +228,7 @@ const Pricing = () => {
                   className="flex items-center justify-center gap-2 text-purple-700"
                   onClick={() => setSelectedBusinessType('pvt-ltd')}
                 >
+                  <Building className="h-4 w-4 text-purple-700" />
                   <span>PLC</span>
                 </TabsTrigger>
                 <TabsTrigger 
@@ -232,6 +236,7 @@ const Pricing = () => {
                   className="flex items-center justify-center gap-2 text-purple-700"
                   onClick={() => setSelectedBusinessType('llp')}
                 >
+                  <Briefcase className="h-4 w-4 text-purple-700" />
                   <span>LLP</span>
                 </TabsTrigger>
                 <TabsTrigger 
@@ -239,6 +244,7 @@ const Pricing = () => {
                   className="flex items-center justify-center gap-2 text-purple-700"
                   onClick={() => setSelectedBusinessType('opc')}
                 >
+                  <UserCircle className="h-4 w-4 text-purple-700" />
                   <span>OPC</span>
                 </TabsTrigger>
               </TabsList>
@@ -248,7 +254,7 @@ const Pricing = () => {
                   <div className="bg-white rounded-xl p-6 mb-8 shadow-sm border border-gray-100">
                     <div className="flex items-start gap-4">
                       <div className="bg-bizsimpl-50 p-3 rounded-lg">
-                        <div className="h-6 w-6 text-purple-700"></div>
+                        {businessTypes[type as keyof typeof businessTypes].icon}
                       </div>
                       <div>
                         <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -303,8 +309,9 @@ const Pricing = () => {
                       </div>
                       <CustomButton 
                         size="lg" 
-                        className="w-full"
-                        variant={pkg.popular ? 'default' : 'outline'}
+                        className={`w-full ${pkg.popular ? 
+                          'bg-purple-700 text-white hover:bg-white hover:text-purple-700 hover:border hover:border-purple-700' : 
+                          'bg-white text-purple-700 border border-purple-700 hover:bg-purple-700 hover:text-white'}`}
                       >
                         Get Started
                       </CustomButton>
@@ -406,7 +413,7 @@ const Pricing = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <h3 className="text-lg font-semibold text-purple-700 mb-2">{faq.question}</h3>
+                  <h3 className="text-lg font-semibold text-black mb-2">{faq.question}</h3>
                   <p className="text-gray-600">{faq.answer}</p>
                 </motion.div>
               ))}
@@ -425,7 +432,7 @@ const Pricing = () => {
                 Join thousands of entrepreneurs who have successfully registered their businesses with Bizsimpl.
               </p>
               <Link to="/registration">
-                <CustomButton size="lg" className="bg-white text-purple-700 hover:bg-gray-100">
+                <CustomButton size="lg" className="bg-white text-purple-700 hover:bg-purple-600 hover:text-white border border-white">
                   Get Started Today
                 </CustomButton>
               </Link>
