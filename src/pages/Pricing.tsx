@@ -4,7 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { CustomButton } from '@/components/ui/CustomButton';
 import { motion } from 'framer-motion';
-import { Check, HelpCircle, Clock, Shield, FileText, Users, Building, Briefcase, UserRound } from 'lucide-react';
+import { Check, HelpCircle, Clock, Shield, FileText, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
   Tabs,
@@ -20,7 +20,6 @@ const Pricing = () => {
   const businessTypes = {
     'pvt-ltd': {
       title: 'Private Limited Company',
-      icon: <Building className="h-6 w-6 text-bizsimpl-600" />,
       description: 'Best for startups, growing businesses, and companies seeking investment.',
       basePrice: 7999,
       govtFees: 'Additional',
@@ -67,7 +66,6 @@ const Pricing = () => {
     },
     'llp': {
       title: 'Limited Liability Partnership',
-      icon: <Briefcase className="h-6 w-6 text-bizsimpl-600" />,
       description: 'Ideal for professional services and partnerships with limited liability.',
       basePrice: 6999,
       govtFees: 'Additional',
@@ -114,7 +112,6 @@ const Pricing = () => {
     },
     'opc': {
       title: 'One Person Company',
-      icon: <UserRound className="h-6 w-6 text-bizsimpl-600" />,
       description: 'Perfect for solo entrepreneurs who want limited liability protection.',
       basePrice: 7499,
       govtFees: 'Additional',
@@ -166,22 +163,22 @@ const Pricing = () => {
   // Benefits list
   const benefits = [
     { 
-      icon: <Clock className="h-6 w-6 text-bizsimpl-600" />,  
+      icon: <Clock className="h-6 w-6 text-purple-700" />,  
       title: 'Fast Processing', 
       description: 'Get your company registered faster than traditional methods.'
     },
     { 
-      icon: <Shield className="h-6 w-6 text-bizsimpl-600" />,  
+      icon: <Shield className="h-6 w-6 text-purple-700" />,  
       title: 'Complete Compliance', 
       description: 'Ensure your business meets all regulatory requirements.'
     },
     { 
-      icon: <FileText className="h-6 w-6 text-bizsimpl-600" />,  
+      icon: <FileText className="h-6 w-6 text-purple-700" />,  
       title: 'Digital Documentation', 
       description: 'All documentation handled digitally for convenience.'
     },
     { 
-      icon: <Users className="h-6 w-6 text-bizsimpl-600" />,  
+      icon: <Users className="h-6 w-6 text-purple-700" />,  
       title: 'Expert Support', 
       description: 'Access to business registration specialists throughout the process.'
     }
@@ -202,7 +199,8 @@ const Pricing = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Transparent pricing for <span className="text-gradient">your business journey</span>
+                <span className="text-gradient">Transparent pricing for </span>
+                <span className="text-gradient">your business journey</span>
               </motion.h1>
               <motion.p 
                 className="text-lg text-gray-600 mb-10"
@@ -224,27 +222,24 @@ const Pricing = () => {
               <TabsList className="grid grid-cols-3 mb-8">
                 <TabsTrigger 
                   value="pvt-ltd" 
-                  className="flex items-center justify-center gap-2"
+                  className="flex items-center justify-center gap-2 text-purple-700"
                   onClick={() => setSelectedBusinessType('pvt-ltd')}
                 >
-                  <Building className="h-4 w-4" />
-                  <span>Private Limited</span>
+                  <span>PLC</span>
                 </TabsTrigger>
                 <TabsTrigger 
                   value="llp" 
-                  className="flex items-center justify-center gap-2"
+                  className="flex items-center justify-center gap-2 text-purple-700"
                   onClick={() => setSelectedBusinessType('llp')}
                 >
-                  <Briefcase className="h-4 w-4" />
                   <span>LLP</span>
                 </TabsTrigger>
                 <TabsTrigger 
                   value="opc" 
-                  className="flex items-center justify-center gap-2"
+                  className="flex items-center justify-center gap-2 text-purple-700"
                   onClick={() => setSelectedBusinessType('opc')}
                 >
-                  <UserRound className="h-4 w-4" />
-                  <span>One Person Company</span>
+                  <span>OPC</span>
                 </TabsTrigger>
               </TabsList>
               
@@ -253,7 +248,7 @@ const Pricing = () => {
                   <div className="bg-white rounded-xl p-6 mb-8 shadow-sm border border-gray-100">
                     <div className="flex items-start gap-4">
                       <div className="bg-bizsimpl-50 p-3 rounded-lg">
-                        {businessTypes[type as keyof typeof businessTypes].icon}
+                        <div className="h-6 w-6 text-purple-700"></div>
                       </div>
                       <div>
                         <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -290,17 +285,17 @@ const Pricing = () => {
                 {selectedType.packages.map((pkg, index) => (
                   <motion.div 
                     key={index}
-                    className={`bg-white rounded-xl overflow-hidden shadow-lg border ${pkg.popular ? 'border-bizsimpl-500' : 'border-gray-100'} relative`}
+                    className={`bg-white rounded-xl overflow-hidden shadow-lg border ${pkg.popular ? 'border-purple-500' : 'border-gray-100'} relative`}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
                     {pkg.popular && (
-                      <div className="absolute top-0 right-0 bg-bizsimpl-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                      <div className="absolute top-0 right-0 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                         MOST POPULAR
                       </div>
                     )}
-                    <div className={`p-6 ${pkg.popular ? 'bg-bizsimpl-50' : 'bg-gray-50'}`}>
+                    <div className={`p-6 ${pkg.popular ? 'bg-purple-50' : 'bg-gray-50'}`}>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
                       <div className="flex items-baseline mb-4">
                         <span className="text-3xl font-bold text-gray-900">₹{pkg.price}</span>
@@ -319,7 +314,7 @@ const Pricing = () => {
                       <ul className="space-y-3">
                         {pkg.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start">
-                            <Check className="h-5 w-5 text-bizsimpl-600 mr-3 flex-shrink-0" />
+                            <Check className="h-5 w-5 text-purple-700 mr-3 flex-shrink-0" />
                             <span className="text-gray-700">{feature}</span>
                           </li>
                         ))}
@@ -332,7 +327,7 @@ const Pricing = () => {
               <div className="mt-8 text-center text-sm text-gray-500">
                 <p className="flex items-center justify-center">
                   <HelpCircle className="h-4 w-4 mr-1" />
-                  Need help choosing? <Link to="/contact" className="ml-1 text-bizsimpl-600 font-medium">Contact our experts</Link>
+                  Need help choosing? <Link to="/contact" className="ml-1 text-purple-700 font-medium">Contact our experts</Link>
                 </p>
               </div>
             </div>
@@ -343,7 +338,7 @@ const Pricing = () => {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Benefits of choosing Bizsimpl</h2>
+              <h2 className="text-3xl font-bold text-purple-700 mb-4">Benefits of choosing Bizsimpl</h2>
               <p className="text-lg text-gray-600">
                 We make business registration simple, affordable, and hassle-free
               </p>
@@ -359,7 +354,7 @@ const Pricing = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <div className="bg-bizsimpl-50 p-3 rounded-lg inline-block mb-4">
+                  <div className="bg-purple-50 p-3 rounded-lg inline-block mb-4">
                     {benefit.icon}
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
@@ -374,7 +369,7 @@ const Pricing = () => {
         <section className="py-16">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold text-purple-700 mb-4">Frequently Asked Questions</h2>
               <p className="text-lg text-gray-600">
                 Everything you need to know about our pricing and packages
               </p>
@@ -411,7 +406,7 @@ const Pricing = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                  <h3 className="text-lg font-semibold text-purple-700 mb-2">{faq.question}</h3>
                   <p className="text-gray-600">{faq.answer}</p>
                 </motion.div>
               ))}
@@ -420,7 +415,7 @@ const Pricing = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-bizsimpl-800 to-bizsimpl-600 text-white">
+        <section className="py-20 bg-purple-700 text-white">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -430,7 +425,7 @@ const Pricing = () => {
                 Join thousands of entrepreneurs who have successfully registered their businesses with Bizsimpl.
               </p>
               <Link to="/registration">
-                <CustomButton size="lg" className="bg-white text-bizsimpl-700 hover:bg-gray-100">
+                <CustomButton size="lg" className="bg-white text-purple-700 hover:bg-gray-100">
                   Get Started Today
                 </CustomButton>
               </Link>
