@@ -11,7 +11,7 @@ interface CustomButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement
 
 const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
   ({ className, children, variant = 'default', size = 'md', isLoading, icon, ...props }, ref) => {
-    const baseStyles = "inline-flex items-center justify-center rounded-lg font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 disabled:pointer-events-none disabled:opacity-50";
+    const baseStyles = "inline-flex items-center justify-center rounded-lg font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 disabled:pointer-events-none disabled:opacity-50 font-poppins";
     
     const variants = {
       default: "bg-white text-purple-700 border border-purple-700 hover:bg-purple-50 active:scale-[0.98] shadow-sm",

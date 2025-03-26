@@ -89,27 +89,27 @@ const Benefits = () => {
     {
       traditional: "Multiple office visits & paperwork",
       bizsimpl: "100% online process",
-      icon: <Clock className="h-5 w-5 text-bizsimpl-600" />
+      icon: <Clock className="h-5 w-5 text-purple-700" />
     },
     {
       traditional: "30-45 days processing time",
       bizsimpl: "Fast-track registration in 7-15 days",
-      icon: <Zap className="h-5 w-5 text-bizsimpl-600" />
+      icon: <Zap className="h-5 w-5 text-purple-700" />
     },
     {
       traditional: "High lawyer & consultation fees",
       bizsimpl: "Transparent, affordable pricing",
-      icon: <DollarSign className="h-5 w-5 text-bizsimpl-600" />
+      icon: <DollarSign className="h-5 w-5 text-purple-700" />
     },
     {
       traditional: "Manual compliance tracking",
       bizsimpl: "Automated compliance alerts",
-      icon: <ShieldCheck className="h-5 w-5 text-bizsimpl-600" />
+      icon: <ShieldCheck className="h-5 w-5 text-purple-700" />
     },
     {
       traditional: "Limited expert access",
       bizsimpl: "Dedicated support team",
-      icon: <BadgeCheck className="h-5 w-5 text-bizsimpl-600" />
+      icon: <BadgeCheck className="h-5 w-5 text-purple-700" />
     }
   ];
 
@@ -142,12 +142,12 @@ const Benefits = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <motion.h1 
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+                className="text-4xl md:text-5xl font-bold text-purple-700 mb-6"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Benefits that make a <span className="text-gradient">real difference</span>
+                Benefits that make a <span className="text-gradient-purple">real difference</span>
               </motion.h1>
               <motion.p 
                 className="text-lg text-gray-600 mb-10"
@@ -193,7 +193,7 @@ const Benefits = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center mb-16">
               <motion.h2 
-                className="text-3xl font-bold text-gray-900 mb-4"
+                className="text-3xl font-bold text-purple-700 mb-4"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -218,10 +218,10 @@ const Benefits = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <div className="grid grid-cols-3 bg-gray-100 text-gray-800 font-semibold">
+              <div className="grid grid-cols-3 bg-gray-100 text-purple-700 font-semibold">
                 <div className="p-4 border-r border-gray-200"></div>
                 <div className="p-4 border-r border-gray-200 text-center">Traditional Process</div>
-                <div className="p-4 text-center text-bizsimpl-700">Bizsimpl Advantage</div>
+                <div className="p-4 text-center text-purple-700">Bizsimpl Advantage</div>
               </div>
               
               {comparisonPoints.map((point, index) => (
@@ -231,14 +231,14 @@ const Benefits = () => {
                   variants={itemVariants}
                 >
                   <div className="p-4 border-r border-gray-200 flex items-center">
-                    <div className="bg-bizsimpl-50 p-2 rounded-full mr-3">
+                    <div className="bg-purple-50 p-2 rounded-full mr-3">
                       {point.icon}
                     </div>
                   </div>
-                  <div className="p-4 border-r border-gray-200 flex items-center text-gray-600">
+                  <div className="p-4 border-r border-gray-200 flex items-center text-gray-900">
                     {point.traditional}
                   </div>
-                  <div className="p-4 flex items-center font-medium text-bizsimpl-700">
+                  <div className="p-4 flex items-center font-medium text-gray-900">
                     {point.bizsimpl}
                   </div>
                 </motion.div>
@@ -252,7 +252,7 @@ const Benefits = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center mb-16">
               <motion.h2 
-                className="text-3xl font-bold text-gray-900 mb-4"
+                className="text-3xl font-bold text-purple-700 mb-4"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -299,9 +299,9 @@ const Benefits = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.2 }}
                 >
-                  <h3 className="text-xl font-semibold mb-2">{story.name}</h3>
-                  <p className="text-gray-600 mb-4">{story.description}</p>
-                  <div className="text-sm font-medium text-bizsimpl-600">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{story.name}</h3>
+                  <p className="text-gray-900 mb-4">{story.description}</p>
+                  <div className="text-sm font-medium text-purple-700">
                     Key benefit: {story.benefit}
                   </div>
                 </motion.div>
@@ -311,7 +311,7 @@ const Benefits = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-bizsimpl-900 to-bizsimpl-700 text-white">
+        <section className="py-20 bg-purple-700 text-white">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <motion.h2 
@@ -339,7 +339,7 @@ const Benefits = () => {
               >
                 <a 
                   href="/pricing"
-                  className="inline-flex items-center px-6 py-3 rounded-lg bg-white text-bizsimpl-700 font-medium hover:bg-gray-100 transition-colors"
+                  className="inline-flex items-center px-6 py-3 rounded-lg bg-white text-purple-700 font-medium hover:bg-gray-100 transition-colors"
                 >
                   View our pricing
                   <ArrowRight className="ml-2 h-4 w-4" />
