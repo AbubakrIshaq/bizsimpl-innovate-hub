@@ -45,7 +45,7 @@ const RegistrationForm = () => {
       </div>
 
       <div className="mb-6">
-        <h1 className="text-2xl font-bold mb-2">Welcome to Business Incorporation</h1>
+        <h1 className="text-2xl font-bold mb-2">Welcome to BizSimpl Startup</h1>
         <h2 className="text-3xl font-bold text-gray-900 mb-2">
           Register your business
         </h2>
