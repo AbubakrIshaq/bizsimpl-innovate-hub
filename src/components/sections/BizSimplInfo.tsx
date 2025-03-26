@@ -29,7 +29,7 @@ const BizSimplInfo = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left column - What is BizSimpl Startup */}
           <div className="reveal">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-purple-700 mb-6">
               What is BizSimpl <span className="ml-1">Startup</span>?
             </h2>
             <p className="text-lg text-gray-600 mb-10">
@@ -38,7 +38,7 @@ const BizSimplInfo = () => {
           </div>
           
           {/* Right column - Stats Cards */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 lg:mt-0">
             <div className="reveal" style={{ transitionDelay: '0ms' }}>
               <CustomCard className="h-full">
                 <div className="flex flex-col items-center text-center p-4">

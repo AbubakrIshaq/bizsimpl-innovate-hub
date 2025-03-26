@@ -65,7 +65,7 @@ const Testimonials = () => {
           <span className="reveal reveal-up inline-block px-3 py-1 mb-4 text-sm font-medium text-purple-700 bg-white rounded-full">
             Testimonials
           </span>
-          <h2 className="reveal reveal-up text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="reveal reveal-up text-3xl md:text-4xl font-bold text-purple-700 mb-6">
             What our customers say
           </h2>
           <p className="reveal reveal-up text-lg text-gray-700">

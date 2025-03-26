@@ -66,7 +66,7 @@ const Hero = () => {
           </p>
           
           <div className="reveal flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <CustomButton size="lg" className="w-full sm:w-auto bg-white text-purple-700 border border-purple-700 hover:bg-purple-50" onClick={handleGetStarted}>
+            <CustomButton size="lg" className="w-full sm:w-auto bg-purple-700 text-white hover:bg-purple-800" onClick={handleGetStarted}>
               Get Started <ArrowRight size={16} className="ml-2" />
             </CustomButton>
           </div>

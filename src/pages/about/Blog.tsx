@@ -105,12 +105,12 @@ const Blog = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <motion.h1 
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center"
+                className="text-4xl md:text-5xl font-bold text-purple-700 mb-6 text-center"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Bizsimpl <span className="text-gradient">Blog</span>
+                Bizsimpl <span className="text-purple-700">Blog</span>
               </motion.h1>
               <motion.p 
                 className="text-lg text-gray-600 mb-10 text-center"
@@ -143,7 +143,7 @@ const Blog = () => {
         {/* Featured Posts */}
         <section className="py-16">
           <div className="container mx-auto px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Articles</h2>
+            <h2 className="text-2xl font-bold text-purple-700 mb-8">Featured Articles</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {featuredPosts.map((post, index) => (
@@ -161,7 +161,7 @@ const Blog = () => {
                       alt={post.title} 
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute top-4 right-4 bg-bizsimpl-600 text-white text-xs font-semibold px-2 py-1 rounded">
+                    <div className="absolute top-4 right-4 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded">
                       Featured
                     </div>
                   </div>
@@ -195,7 +195,7 @@ const Blog = () => {
         {/* Recent Posts */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">Recent Articles</h2>
+            <h2 className="text-2xl font-bold text-purple-700 mb-8">Recent Articles</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {recentPosts.map((post, index) => (
@@ -236,7 +236,7 @@ const Blog = () => {
             </div>
 
             <div className="mt-12 text-center">
-              <CustomButton size="lg">
+              <CustomButton size="lg" className="bg-purple-700 text-white hover:bg-purple-800">
                 Load More Articles
               </CustomButton>
             </div>
@@ -246,7 +246,7 @@ const Blog = () => {
         {/* Newsletter */}
         <section className="py-16">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto bg-gradient-to-r from-bizsimpl-800 to-bizsimpl-600 rounded-2xl shadow-lg overflow-hidden">
+            <div className="max-w-4xl mx-auto bg-gradient-to-r from-purple-800 to-purple-600 rounded-2xl shadow-lg overflow-hidden">
               <div className="p-10 md:p-12 text-center text-white">
                 <h2 className="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
                 <p className="text-lg text-white/80 mb-8">
@@ -258,7 +258,7 @@ const Blog = () => {
                     placeholder="Your email address" 
                     className="bg-white/10 border-white/20 text-white placeholder:text-white/60 flex-grow"
                   />
-                  <CustomButton className="bg-white text-bizsimpl-700 hover:bg-gray-100">
+                  <CustomButton className="bg-white text-purple-700 hover:bg-gray-100">
                     Subscribe
                   </CustomButton>
                 </div>

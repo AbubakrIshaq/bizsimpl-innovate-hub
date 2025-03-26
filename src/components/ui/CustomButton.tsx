@@ -14,8 +14,8 @@ const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
     const baseStyles = "inline-flex items-center justify-center rounded-lg font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 disabled:pointer-events-none disabled:opacity-50 font-poppins";
     
     const variants = {
-      default: "bg-white text-purple-700 border border-purple-700 hover:bg-purple-50 active:scale-[0.98] shadow-sm",
-      outline: "border border-secondary/30 hover:bg-secondary/10 text-secondary",
+      default: "bg-purple-700 text-white hover:bg-purple-800 active:scale-[0.98] shadow-sm",
+      outline: "border border-purple-700 bg-white text-purple-700 hover:bg-purple-50",
       subtle: "bg-primary/10 text-primary hover:bg-primary/20",
       ghost: "text-secondary hover:bg-secondary/10",
       link: "text-primary underline-offset-4 hover:underline"

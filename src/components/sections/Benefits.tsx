@@ -64,7 +64,7 @@ const Benefits = () => {
           <span className="reveal reveal-up inline-block px-3 py-1 mb-4 text-sm font-medium text-purple-700 bg-purple-50 rounded-full">
             Why Choose Us
           </span>
-          <h2 className="reveal reveal-up text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="reveal reveal-up text-3xl md:text-4xl font-bold text-purple-700 mb-6">
             Benefits that make a <span className="text-purple-700">difference</span>
           </h2>
           <p className="reveal reveal-up text-lg text-gray-600">

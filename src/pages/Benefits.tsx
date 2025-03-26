@@ -147,7 +147,7 @@ const Benefits = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Benefits that make a <span className="text-gradient-purple">real difference</span>
+                Benefits that make a <span className="text-purple-700">real difference</span>
               </motion.h1>
               <motion.p 
                 className="text-lg text-gray-600 mb-10"
@@ -235,10 +235,10 @@ const Benefits = () => {
                       {point.icon}
                     </div>
                   </div>
-                  <div className="p-4 border-r border-gray-200 flex items-center text-gray-900">
+                  <div className="p-4 border-r border-gray-200 flex items-center text-black">
                     {point.traditional}
                   </div>
-                  <div className="p-4 flex items-center font-medium text-gray-900">
+                  <div className="p-4 flex items-center font-medium text-black">
                     {point.bizsimpl}
                   </div>
                 </motion.div>
@@ -299,8 +299,8 @@ const Benefits = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.2 }}
                 >
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{story.name}</h3>
-                  <p className="text-gray-900 mb-4">{story.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-black">{story.name}</h3>
+                  <p className="text-black mb-4">{story.description}</p>
                   <div className="text-sm font-medium text-purple-700">
                     Key benefit: {story.benefit}
                   </div>

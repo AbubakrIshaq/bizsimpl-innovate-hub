@@ -47,7 +47,7 @@ const Registration = () => {
                 <Link to="/private-limited">
                   <CustomButton 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white/10 whitespace-nowrap"
+                    className="bg-white text-purple-700 hover:bg-white/90 border-white whitespace-nowrap"
                   >
                     Learn More
                   </CustomButton>
@@ -80,7 +80,7 @@ const Registration = () => {
                 <Link to="/llp">
                   <CustomButton 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white/10 whitespace-nowrap"
+                    className="bg-white text-purple-700 hover:bg-white/90 border-white whitespace-nowrap"
                   >
                     Learn More
                   </CustomButton>
@@ -113,7 +113,7 @@ const Registration = () => {
                 <Link to="/one-person-company">
                   <CustomButton 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white/10 whitespace-nowrap"
+                    className="bg-white text-purple-700 hover:bg-white/90 border-white whitespace-nowrap"
                   >
                     Learn More
                   </CustomButton>
