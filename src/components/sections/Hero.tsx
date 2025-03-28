@@ -1,49 +1,47 @@
-
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
 import { ArrowRight } from 'lucide-react';
-
-const companyLogos = [
-  { name: 'Facebook', logo: '/logos/facebook.svg' },
-  { name: 'Netflix', logo: '/logos/netflix.svg' },
-  { name: 'Uber', logo: '/logos/uber.svg' },
-  { name: 'Airbnb', logo: '/logos/airbnb.svg' },
-  { name: 'Slack', logo: '/logos/slack.svg' },
-  { name: 'Dropbox', logo: '/logos/dropbox.svg' }
-];
-
+const companyLogos = [{
+  name: 'Facebook',
+  logo: '/logos/facebook.svg'
+}, {
+  name: 'Netflix',
+  logo: '/logos/netflix.svg'
+}, {
+  name: 'Uber',
+  logo: '/logos/uber.svg'
+}, {
+  name: 'Airbnb',
+  logo: '/logos/airbnb.svg'
+}, {
+  name: 'Slack',
+  logo: '/logos/slack.svg'
+}, {
+  name: 'Dropbox',
+  logo: '/logos/dropbox.svg'
+}];
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-  
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
     const elements = heroRef.current?.querySelectorAll('.reveal');
-    elements?.forEach((el) => observer.observe(el));
-    
-    return () => elements?.forEach((el) => observer.unobserve(el));
+    elements?.forEach(el => observer.observe(el));
+    return () => elements?.forEach(el => observer.unobserve(el));
   }, []);
-
   const handleGetStarted = () => {
     navigate('/pricing');
   };
-
-  return (
-    <div 
-      ref={heroRef}
-      className="relative min-h-screen flex flex-col justify-between pt-24 pb-20 overflow-hidden"
-    >
+  return <div ref={heroRef} className="relative min-h-screen flex flex-col justify-between pt-24 pb-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-gradient-radial from-purple-100/50 to-transparent opacity-60"></div>
@@ -75,21 +73,17 @@ const Hero = () => {
       
       {/* Wider company logo carousel with movement */}
       <div className="reveal w-full mt-auto">
-        <p className="text-base font-bold text-gray-700 mb-3 text-center">Trusted by innovative businesses</p>
+        <p className="font-bold text-gray-700 mb-3 text-center text-3xl py-[35px]">Trusted by innovative businesses</p>
         <div className="w-full max-w-6xl mx-auto overflow-hidden py-4">
-          <div className="logo-scroll">
-            {[...companyLogos, ...companyLogos, ...companyLogos].map((company, index) => (
-              <div key={index} className="logo-item mx-6">
+          <div className="logo-scroll py-[30px]">
+            {[...companyLogos, ...companyLogos, ...companyLogos].map((company, index) => <div key={index} className="logo-item mx-6">
                 <div className="h-5 px-3 bg-gray-200/70 rounded-md flex items-center justify-center text-xs text-gray-500 font-medium">
                   {company.name}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Hero;
