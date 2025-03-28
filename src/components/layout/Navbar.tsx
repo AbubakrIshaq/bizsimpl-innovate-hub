@@ -1,13 +1,16 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
 import { Menu, X, ChevronDown, Building, Briefcase, UserRound } from 'lucide-react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+
   const navLinks = [{
     name: 'Blog',
     href: '/blog'
@@ -18,6 +21,7 @@ const Navbar = () => {
     name: 'Pricing',
     href: '/pricing'
   }];
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -25,12 +29,13 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-1">
+          <Link to="/" className="flex items-center space-x-2">
             <img src="/lovable-uploads/1f646fc7-0cab-4348-bd28-99c2a8d3bd5f.png" alt="BizSimpl Logo" className="h-12 w-auto object-contain" />
-            <span className="text-xl text-purple-700 font-poppins tracking-tight font-bold"></span>
+            <span className="text-xl text-purple-700 font-bold" style={{ fontFamily: "'Poppins', system-ui, sans-serif", borderRadius: "0.5rem" }}>BizSimpl Startup</span>
           </Link>
 
           <nav className="hidden md:flex items-center justify-center flex-grow mx-auto">
@@ -133,4 +138,5 @@ const Navbar = () => {
       </div>
     </header>;
 };
+
 export default Navbar;

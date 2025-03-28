@@ -84,6 +84,11 @@
   .bg-registration {
     @apply bg-purple-800;
   }
+
+  .rounded-text {
+    font-family: 'Poppins', system-ui, sans-serif;
+    letter-spacing: -0.025em;
+  }
 }
 
 @layer components {
