@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { motion } from 'framer-motion';
+import { CustomCard } from '@/components/ui/CustomCard';
 
 const AboutUs = () => {
   return (
@@ -11,7 +12,7 @@ const AboutUs = () => {
       
       <main className="flex-grow pt-24">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-b from-bizsimpl-50 to-white">
+        <section className="py-20 bg-gradient-to-b from-purple-50 to-white">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <motion.h1 
@@ -20,7 +21,7 @@ const AboutUs = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                About <span className="text-gradient">Bizsimpl</span>
+                About <span className="text-purple-700">Bizsimpl</span>
               </motion.h1>
               <motion.p 
                 className="text-lg text-gray-600 mb-10"
@@ -45,7 +46,7 @@ const AboutUs = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+                  <h2 className="text-3xl font-bold text-purple-700 mb-6">Our Story</h2>
                   <div className="space-y-4 text-gray-600">
                     <p>
                       Founded in 2020, Bizsimpl emerged from a simple observation: starting a business in India involved too much paperwork, confusing procedures, and hidden costs.
@@ -77,10 +78,10 @@ const AboutUs = () => {
         </section>
 
         {/* Our Values Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-purple-50">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
+              <h2 className="text-3xl font-bold text-purple-700 mb-4">Our Values</h2>
               <p className="text-lg text-gray-600">
                 The principles that guide everything we do
               </p>
@@ -106,14 +107,14 @@ const AboutUs = () => {
               ].map((value, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 text-center"
+                  className="bg-white rounded-xl p-8 shadow-sm border border-purple-100 text-center"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
                   <div className="text-4xl mb-4">{value.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
+                  <h3 className="text-xl font-semibold text-purple-700 mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
                 </motion.div>
               ))}
@@ -125,7 +126,7 @@ const AboutUs = () => {
         <section className="py-16">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
+              <h2 className="text-3xl font-bold text-purple-700 mb-4">Our Leadership Team</h2>
               <p className="text-lg text-gray-600">
                 Meet the people who are driving our mission forward
               </p>
@@ -156,7 +157,7 @@ const AboutUs = () => {
               ].map((member, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 text-center"
+                  className="bg-white rounded-xl overflow-hidden shadow-sm border border-purple-100 text-center"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -165,7 +166,7 @@ const AboutUs = () => {
                   <img src={member.image} alt={member.name} className="w-full h-64 object-cover object-center" />
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                    <p className="text-bizsimpl-600">{member.role}</p>
+                    <p className="text-purple-700">{member.role}</p>
                   </div>
                 </motion.div>
               ))}

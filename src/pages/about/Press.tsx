@@ -71,7 +71,7 @@ const Press = () => {
       
       <main className="flex-grow pt-24">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-b from-bizsimpl-50 to-white">
+        <section className="py-20 bg-gradient-to-b from-purple-50 to-white">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <motion.h1 
@@ -80,7 +80,7 @@ const Press = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Press <span className="text-gradient">Room</span>
+                Press <span className="text-purple-700">Room</span>
               </motion.h1>
               <motion.p 
                 className="text-lg text-gray-600 mb-10"
@@ -96,10 +96,10 @@ const Press = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <CustomButton>
+                <CustomButton className="bg-purple-700 hover:bg-purple-800 text-white">
                   <Download className="mr-2 h-4 w-4" /> Download Press Kit
                 </CustomButton>
-                <CustomButton variant="outline">
+                <CustomButton variant="outline" className="border-purple-700 text-purple-700 hover:bg-purple-700 hover:text-white">
                   Media Inquiries
                 </CustomButton>
               </motion.div>
@@ -111,13 +111,13 @@ const Press = () => {
         <section className="py-16">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Press Releases</h2>
+              <h2 className="text-3xl font-bold text-purple-700 mb-8">Press Releases</h2>
               
               <div className="space-y-6">
                 {pressReleases.map((release, index) => (
                   <motion.div 
                     key={index}
-                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+                    className="bg-white rounded-xl p-6 shadow-sm border border-purple-100"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -127,11 +127,11 @@ const Press = () => {
                       <Calendar className="h-4 w-4 mr-2" />
                       {release.date}
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{release.title}</h3>
+                    <h3 className="text-xl font-semibold text-purple-700 mb-3">{release.title}</h3>
                     <p className="text-gray-600 mb-4">{release.excerpt}</p>
                     <a 
                       href={release.link} 
-                      className="inline-flex items-center text-bizsimpl-600 hover:text-bizsimpl-700 font-medium"
+                      className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
                     >
                       Read Full Release <ExternalLink className="ml-1 h-4 w-4" />
                     </a>
@@ -143,17 +143,17 @@ const Press = () => {
         </section>
 
         {/* Media Appearances */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-purple-50">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Media Appearances</h2>
+              <h2 className="text-3xl font-bold text-purple-700 mb-8">Media Appearances</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {mediaAppearances.map((media, index) => (
                   <motion.a 
                     key={index}
                     href={media.link}
-                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                    className="bg-white rounded-xl p-6 shadow-sm border border-purple-100 hover:shadow-md transition-shadow"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -172,8 +172,8 @@ const Press = () => {
                         {media.date}
                       </div>
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{media.title}</h3>
-                    <div className="flex items-center text-bizsimpl-600 text-sm font-medium">
+                    <h3 className="text-lg font-semibold text-purple-700 mb-2">{media.title}</h3>
+                    <div className="flex items-center text-purple-600 text-sm font-medium">
                       Read Article <ExternalLink className="ml-1 h-3 w-3" />
                     </div>
                   </motion.a>
@@ -187,37 +187,37 @@ const Press = () => {
         <section className="py-16">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Brand Assets</h2>
+              <h2 className="text-3xl font-bold text-purple-700 mb-8">Brand Assets</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <motion.div 
-                  className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+                  className="bg-white rounded-xl p-6 shadow-sm border border-purple-100"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Logos & Graphics</h3>
+                  <h3 className="text-xl font-semibold text-purple-700 mb-4">Logos & Graphics</h3>
                   <p className="text-gray-600 mb-6">
                     Download our official logos, icons, and graphic elements in various formats for press use.
                   </p>
-                  <CustomButton variant="outline" size="sm">
+                  <CustomButton variant="outline" size="sm" className="border-purple-700 text-purple-700 hover:bg-purple-700 hover:text-white">
                     <Download className="mr-2 h-4 w-4" /> Download Logo Pack
                   </CustomButton>
                 </motion.div>
                 
                 <motion.div 
-                  className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+                  className="bg-white rounded-xl p-6 shadow-sm border border-purple-100"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Executive Photos</h3>
+                  <h3 className="text-xl font-semibold text-purple-700 mb-4">Executive Photos</h3>
                   <p className="text-gray-600 mb-6">
                     High-resolution photographs of our leadership team for media publications.
                   </p>
-                  <CustomButton variant="outline" size="sm">
+                  <CustomButton variant="outline" size="sm" className="border-purple-700 text-purple-700 hover:bg-purple-700 hover:text-white">
                     <Download className="mr-2 h-4 w-4" /> Download Photo Pack
                   </CustomButton>
                 </motion.div>
@@ -227,25 +227,25 @@ const Press = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 bg-bizsimpl-50">
+        <section className="py-16 bg-purple-50">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Media Contact</h2>
+              <h2 className="text-3xl font-bold text-purple-700 mb-4">Media Contact</h2>
               <p className="text-lg text-gray-600 mb-6">
                 For press inquiries, interview requests, or additional information, please contact our media relations team.
               </p>
-              <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-md mx-auto">
+              <div className="bg-white rounded-xl p-8 shadow-sm border border-purple-100 max-w-md mx-auto">
                 <div className="text-left space-y-4">
                   <div>
-                    <h3 className="font-semibold text-gray-900">Media Relations</h3>
-                    <p className="text-bizsimpl-600">press@bizsimpl.com</p>
+                    <h3 className="font-semibold text-purple-700">Media Relations</h3>
+                    <p className="text-purple-600">press@bizsimpl.com</p>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
+                    <h3 className="font-semibold text-purple-700">Phone</h3>
                     <p className="text-gray-600">+91 98765 43210</p>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Office Hours</h3>
+                    <h3 className="font-semibold text-purple-700">Office Hours</h3>
                     <p className="text-gray-600">Monday - Friday, 9:00 AM - 6:00 PM IST</p>
                   </div>
                 </div>

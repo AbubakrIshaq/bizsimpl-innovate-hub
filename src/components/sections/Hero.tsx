@@ -1,7 +1,9 @@
+
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
 import { ArrowRight } from 'lucide-react';
+
 const companyLogos = [{
   name: 'Facebook',
   logo: '/logos/facebook.svg'
@@ -21,9 +23,11 @@ const companyLogos = [{
   name: 'Dropbox',
   logo: '/logos/dropbox.svg'
 }];
+
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -34,14 +38,19 @@ const Hero = () => {
     }, {
       threshold: 0.1
     });
+    
     const elements = heroRef.current?.querySelectorAll('.reveal');
     elements?.forEach(el => observer.observe(el));
+    
     return () => elements?.forEach(el => observer.unobserve(el));
   }, []);
+  
   const handleGetStarted = () => {
     navigate('/pricing');
   };
-  return <div ref={heroRef} className="relative min-h-screen flex flex-col justify-between pt-24 pb-20 overflow-hidden">
+  
+  return (
+    <div ref={heroRef} className="relative min-h-screen flex flex-col justify-between pt-24 pb-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-gradient-radial from-purple-100/50 to-transparent opacity-60"></div>
@@ -56,7 +65,7 @@ const Hero = () => {
           </span>
           
           <h1 className="reveal text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight text-balance mb-6">
-            Your Business <span className="text-black">Launchpad</span>
+            Your Business <span className="text-purple-700">Launchpad</span>
           </h1>
           
           <p className="reveal md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto text-base">
@@ -64,7 +73,11 @@ const Hero = () => {
           </p>
           
           <div className="reveal flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <CustomButton size="lg" className="w-full sm:w-auto bg-purple-700 text-white hover:bg-purple-800" onClick={handleGetStarted}>
+            <CustomButton 
+              size="lg" 
+              className="w-full sm:w-auto bg-purple-700 text-white hover:bg-purple-800" 
+              onClick={handleGetStarted}
+            >
               Get Started <ArrowRight size={16} className="ml-2" />
             </CustomButton>
           </div>
@@ -73,17 +86,21 @@ const Hero = () => {
       
       {/* Wider company logo carousel with movement */}
       <div className="reveal w-full mt-auto">
-        <p className="font-bold text-gray-700 mb-3 text-center text-3xl py-[35px]">Trusted by innovative businesses</p>
+        <p className="font-bold text-purple-700 mb-3 text-center text-3xl py-[35px]">Trusted by innovative businesses</p>
         <div className="w-full max-w-6xl mx-auto overflow-hidden py-4">
           <div className="logo-scroll py-[30px]">
-            {[...companyLogos, ...companyLogos, ...companyLogos].map((company, index) => <div key={index} className="logo-item mx-6">
-                <div className="h-5 px-3 bg-gray-200/70 rounded-md flex items-center justify-center text-xs text-gray-500 font-medium">
+            {[...companyLogos, ...companyLogos, ...companyLogos].map((company, index) => (
+              <div key={index} className="logo-item mx-6">
+                <div className="h-5 px-3 bg-purple-100/70 rounded-md flex items-center justify-center text-xs text-purple-700 font-medium">
                   {company.name}
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default Hero;
