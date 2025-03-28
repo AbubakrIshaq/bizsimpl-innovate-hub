@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { User, Clock, Award, MapPin } from 'lucide-react';
+import { User, Clock, Award, MapPin, CheckCircle } from 'lucide-react';
 
 const BizSimplInfo = () => {
   const infoRef = useRef<HTMLDivElement>(null);
@@ -65,6 +65,12 @@ const BizSimplInfo = () => {
               <div className="text-center">
                 <h3 className="text-5xl font-bold text-blue-500 mb-2">25+</h3>
                 <p className="text-gray-500 text-sm">States Covered</p>
+              </div>
+              
+              {/* New Success Rate Stat */}
+              <div className="text-center">
+                <h3 className="text-5xl font-bold text-green-500 mb-2">98%</h3>
+                <p className="text-gray-500 text-sm">Success Rate</p>
               </div>
             </div>
           </div>
