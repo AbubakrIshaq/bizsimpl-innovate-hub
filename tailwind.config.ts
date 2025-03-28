@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -22,6 +21,7 @@ export default {
 			fontFamily: {
 				sans: ['Poppins', 'sans-serif'],
 				poppins: ['Poppins', 'sans-serif'],
+				quicksand: ['Quicksand', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -70,7 +70,6 @@ export default {
 					900: '#1c3aa6',
 					950: '#172554',
 				},
-				// New color theme
 				theme: {
 					primary: '#1A2C56',    // Navy blue
 					secondary: '#0EA5E9',  // Cobalt blue
