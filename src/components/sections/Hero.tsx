@@ -65,7 +65,7 @@ const Hero = () => {
           </span>
           
           <h1 className="reveal text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight text-balance mb-6">
-            Your Business <span className="text-purple-700">Launchpad</span>
+            Your Business <span className="text-gray-900">Launchpad</span>
           </h1>
           
           <p className="reveal md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto text-base">
