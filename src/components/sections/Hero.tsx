@@ -50,7 +50,7 @@ const Hero = () => {
   };
   
   return (
-    <div ref={heroRef} className="relative min-h-screen flex flex-col justify-between pt-24 pb-20 overflow-hidden">
+    <div ref={heroRef} className="relative min-h-screen flex flex-col justify-between pt-24 pb-10 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-gradient-radial from-purple-100/50 to-transparent opacity-60"></div>
@@ -58,7 +58,7 @@ const Hero = () => {
       </div>
       
       {/* Main content section */}
-      <div className="container mx-auto px-6 lg:px-8 mb-16">
+      <div className="container mx-auto px-6 lg:px-8 mb-8">
         <div className="max-w-4xl mx-auto text-center">
           <span className="inline-block reveal px-4 py-2 mb-6 rounded-full bg-purple-50 text-purple-700 text-sm font-medium">
             Simplified Business Registration & Compliance
@@ -84,11 +84,11 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Wider company logo carousel with movement */}
+      {/* Wider company logo carousel with reduced padding/spacing */}
       <div className="reveal w-full mt-auto">
-        <p className="font-bold text-gray-900 mb-3 text-center text-3xl py-[35px]">Trusted by innovative businesses</p>
-        <div className="w-full max-w-6xl mx-auto overflow-hidden py-4">
-          <div className="logo-scroll py-[30px]">
+        <p className="font-bold text-gray-900 mb-1 text-center text-3xl py-[15px]">Trusted by innovative businesses</p>
+        <div className="w-full max-w-6xl mx-auto overflow-hidden py-2">
+          <div className="logo-scroll py-[20px]">
             {[...companyLogos, ...companyLogos, ...companyLogos].map((company, index) => (
               <div key={index} className="logo-item mx-6">
                 <div className="h-5 px-3 bg-purple-100/70 rounded-md flex items-center justify-center text-xs text-purple-700 font-medium">
