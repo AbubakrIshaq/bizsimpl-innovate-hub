@@ -1,7 +1,10 @@
+
 import React, { useEffect, useRef } from 'react';
 import { CustomCard } from '../ui/CustomCard';
+
 const BizSimplInfo = () => {
   const infoRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -12,10 +15,13 @@ const BizSimplInfo = () => {
     }, {
       threshold: 0.1
     });
+
     const elements = infoRef.current?.querySelectorAll('.reveal');
     elements?.forEach(el => observer.observe(el));
+
     return () => elements?.forEach(el => observer.unobserve(el));
   }, []);
+
   return <section ref={infoRef} id="about" className="bg-white py-12">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -35,12 +41,12 @@ const BizSimplInfo = () => {
           <div className="reveal self-start mt-0">
             <CustomCard className="h-full">
               <div className="grid grid-cols-2 gap-4 p-4 py-0">
-                <div className="flex flex-col items-center text-center py-[5px] px-0">
+                <div className="flex flex-col items-center text-center py-[12px] px-0">
                   <h3 className="text-secondary mb-2 text-4xl font-extrabold">400+</h3>
                   <p className="text-gray-600 text-sm">Businesses trust us</p>
                 </div>
                 
-                <div className="flex flex-col items-center text-center">
+                <div className="flex flex-col items-center text-center py-[12px]">
                   <h3 className="text-secondary mb-2 font-bold text-4xl">500+</h3>
                   <p className="text-gray-600 text-sm">Businesses Incorporated</p>
                 </div>
@@ -61,4 +67,5 @@ const BizSimplInfo = () => {
       </div>
     </section>;
 };
+
 export default BizSimplInfo;
