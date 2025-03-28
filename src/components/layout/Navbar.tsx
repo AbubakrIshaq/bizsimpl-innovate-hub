@@ -35,7 +35,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <img src="/lovable-uploads/1f646fc7-0cab-4348-bd28-99c2a8d3bd5f.png" alt="BizSimpl Logo" className="h-12 w-auto object-contain" />
-            <span className="text-xl text-purple-700 font-bold" style={{ fontFamily: "'Poppins', system-ui, sans-serif", borderRadius: "0.5rem" }}>BizSimpl Startup</span>
+            <span className="text-xl text-purple-700 font-bold rounded-text" style={{ 
+              fontFamily: "'Poppins', system-ui, sans-serif", 
+              letterSpacing: "0", 
+              fontWeight: "600",
+              fontSize: "1.35rem"
+            }}>BizSimpl Startup</span>
           </Link>
 
           <nav className="hidden md:flex items-center justify-center flex-grow mx-auto">
