@@ -23,40 +23,55 @@ const BizSimplInfo = () => {
   }, []);
 
   return (
-    <section ref={infoRef} id="about" className="bg-white py-16">
+    <section ref={infoRef} id="about" className="bg-white py-12">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left column - What is BizSimpl Startup */}
           <div className="reveal">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-8">
-              <span className="text-gray-800">What is</span> <span className="text-secondary">BizSimpl Startup?</span>
+            <h2 className="text-3xl font-bold text-purple-700 mb-6 md:text-3xl">
+              What is BizSimpl <span className="ml-1">Startup</span>?
             </h2>
-            <p className="text-gray-600 mb-6 text-lg leading-relaxed max-w-2xl">
-              BizSimpl Startup is an exclusive early-stage startup program that empowers founders by providing seamless company incorporation services & offering dedicated startup building programs & resources.
+            <p className="text-gray-600 mb-6 text-base">
+              BizSimpl Startup is a platform dedicated to empowering entrepreneurs in launching their businesses. We offer free consultations to help founders choose the right business structure, as well as assist in their formation and registration, ensuring a smooth and hassle-free process.
             </p>
           </div>
           
-          {/* Right column - Stats */}
-          <div className="grid grid-cols-1 gap-y-8 self-start">
-            <div className="reveal flex items-baseline" style={{ transitionDelay: '0ms' }}>
-              <h3 className="text-5xl lg:text-6xl font-bold text-blue-500 mr-6">400+</h3>
-              <p className="text-gray-600 text-lg">
-                Founders in the<br />Community
-              </p>
+          {/* Right column - Stats Cards */}
+          <div className="grid grid-cols-2 gap-4 self-start">
+            <div className="reveal" style={{transitionDelay: '0ms'}}>
+              <CustomCard className="h-full">
+                <div className="flex flex-col items-center text-center p-4">
+                  <h3 className="text-3xl font-bold text-secondary mb-2">400+</h3>
+                  <p className="text-gray-600 text-sm">Businesses trust us</p>
+                </div>
+              </CustomCard>
             </div>
             
-            <div className="reveal flex items-baseline" style={{ transitionDelay: '100ms' }}>
-              <h3 className="text-5xl lg:text-6xl font-bold text-blue-500 mr-6">500+</h3>
-              <p className="text-gray-600 text-lg">
-                Company<br />Registrations
-              </p>
+            <div className="reveal" style={{transitionDelay: '100ms'}}>
+              <CustomCard className="h-full">
+                <div className="flex flex-col items-center text-center p-4">
+                  <h3 className="text-3xl font-bold text-secondary mb-2">500+</h3>
+                  <p className="text-gray-600 text-sm">Businesses Incorporated</p>
+                </div>
+              </CustomCard>
             </div>
             
-            <div className="reveal flex items-baseline" style={{ transitionDelay: '200ms' }}>
-              <h3 className="text-5xl lg:text-6xl font-bold text-blue-500 mr-6">10+</h3>
-              <p className="text-gray-600 text-lg">
-                BizSimpl-backed<br />Startups
-              </p>
+            <div className="reveal" style={{transitionDelay: '200ms'}}>
+              <CustomCard className="h-full">
+                <div className="flex flex-col items-center text-center p-4">
+                  <h3 className="text-3xl font-bold text-secondary mb-2">95%</h3>
+                  <p className="text-gray-600 text-sm">Success Rate</p>
+                </div>
+              </CustomCard>
+            </div>
+            
+            <div className="reveal" style={{transitionDelay: '300ms'}}>
+              <CustomCard className="h-full">
+                <div className="flex flex-col items-center text-center p-4">
+                  <h3 className="text-3xl font-bold text-secondary mb-2">10+</h3>
+                  <p className="text-gray-600 text-sm">Years Of Experience</p>
+                </div>
+              </CustomCard>
             </div>
           </div>
         </div>
