@@ -31,13 +31,15 @@ const BizSimplInfo = () => {
             <h2 className="text-3xl font-bold text-purple-700 mb-6 md:text-3xl">
               What is BizSimpl <span className="ml-1">Startup</span>?
             </h2>
-            <p className="text-gray-600 mb-6 text-base">
-              BizSimpl Startup is a platform dedicated to empowering entrepreneurs in launching their businesses. We offer free consultations to help founders choose the right business structure, as well as assist in their formation and registration, ensuring a smooth and hassle-free process.
-            </p>
+            <div className="flex flex-col space-y-6">
+              <p className="text-gray-600 text-base">
+                BizSimpl Startup is a platform dedicated to empowering entrepreneurs in launching their businesses. We offer free consultations to help founders choose the right business structure, as well as assist in their formation and registration, ensuring a smooth and hassle-free process.
+              </p>
+            </div>
           </div>
           
           {/* Right column - Stats Cards */}
-          <div className="grid grid-cols-2 gap-4 self-start">
+          <div className="grid grid-cols-2 gap-4 self-start mt-0">
             <div className="reveal" style={{transitionDelay: '0ms'}}>
               <CustomCard className="h-full">
                 <div className="flex flex-col items-center text-center p-4">
