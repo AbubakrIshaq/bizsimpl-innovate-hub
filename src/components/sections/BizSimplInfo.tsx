@@ -38,43 +38,31 @@ const BizSimplInfo = () => {
             </div>
           </div>
           
-          {/* Right column - Stats Cards */}
-          <div className="grid grid-cols-2 gap-4 self-start mt-0">
-            <div className="reveal" style={{transitionDelay: '0ms'}}>
-              <CustomCard className="h-full">
-                <div className="flex flex-col items-center text-center p-4">
+          {/* Right column - Stats Cards (now in a single div) */}
+          <div className="reveal self-start mt-0">
+            <CustomCard className="h-full">
+              <div className="grid grid-cols-2 gap-4 p-4">
+                <div className="flex flex-col items-center text-center">
                   <h3 className="text-3xl font-bold text-secondary mb-2">400+</h3>
                   <p className="text-gray-600 text-sm">Businesses trust us</p>
                 </div>
-              </CustomCard>
-            </div>
-            
-            <div className="reveal" style={{transitionDelay: '100ms'}}>
-              <CustomCard className="h-full">
-                <div className="flex flex-col items-center text-center p-4">
+                
+                <div className="flex flex-col items-center text-center">
                   <h3 className="text-3xl font-bold text-secondary mb-2">500+</h3>
                   <p className="text-gray-600 text-sm">Businesses Incorporated</p>
                 </div>
-              </CustomCard>
-            </div>
-            
-            <div className="reveal" style={{transitionDelay: '200ms'}}>
-              <CustomCard className="h-full">
-                <div className="flex flex-col items-center text-center p-4">
+                
+                <div className="flex flex-col items-center text-center">
                   <h3 className="text-3xl font-bold text-secondary mb-2">95%</h3>
                   <p className="text-gray-600 text-sm">Success Rate</p>
                 </div>
-              </CustomCard>
-            </div>
-            
-            <div className="reveal" style={{transitionDelay: '300ms'}}>
-              <CustomCard className="h-full">
-                <div className="flex flex-col items-center text-center p-4">
+                
+                <div className="flex flex-col items-center text-center">
                   <h3 className="text-3xl font-bold text-secondary mb-2">10+</h3>
                   <p className="text-gray-600 text-sm">Years Of Experience</p>
                 </div>
-              </CustomCard>
-            </div>
+              </div>
+            </CustomCard>
           </div>
         </div>
       </div>
