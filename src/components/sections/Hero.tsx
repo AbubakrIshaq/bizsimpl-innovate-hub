@@ -59,7 +59,7 @@ const Hero = () => {
             Your Business <span className="text-black">Launchpad</span>
           </h1>
           
-          <p className="reveal md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto text-lg">
+          <p className="reveal md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto text-base">
             One platform to register, manage and grow your business. Say goodbye to paperwork and hello to efficiency.
           </p>
           
