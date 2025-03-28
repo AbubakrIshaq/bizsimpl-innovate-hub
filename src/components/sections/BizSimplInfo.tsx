@@ -1,10 +1,7 @@
-
 import React, { useEffect, useRef } from 'react';
 import { CustomCard } from '../ui/CustomCard';
-
 const BizSimplInfo = () => {
   const infoRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -15,13 +12,10 @@ const BizSimplInfo = () => {
     }, {
       threshold: 0.1
     });
-
     const elements = infoRef.current?.querySelectorAll('.reveal');
     elements?.forEach(el => observer.observe(el));
-
     return () => elements?.forEach(el => observer.unobserve(el));
   }, []);
-
   return <section ref={infoRef} id="about" className="bg-white py-12">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -31,7 +25,7 @@ const BizSimplInfo = () => {
               What is BizSimpl <span className="ml-1">Startup</span>?
             </h2>
             <div className="flex flex-col space-y-6">
-              <p className="text-gray-600 text-base">
+              <p className="text-gray-600 text-base text-justify">
                 BizSimpl Startup is a platform dedicated to empowering entrepreneurs in launching their businesses. We offer free consultations to help founders choose the right business structure, as well as assist in their formation and registration, ensuring a smooth and hassle-free process.
               </p>
             </div>
@@ -67,5 +61,4 @@ const BizSimplInfo = () => {
       </div>
     </section>;
 };
-
 export default BizSimplInfo;
