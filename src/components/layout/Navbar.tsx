@@ -46,7 +46,7 @@ const Navbar = () => {
               className="h-12 w-auto object-contain" 
             />
             <span className="text-xl font-bold text-purple-700 font-poppins tracking-tight">
-              BizSimpl<span className="ml-0.5">Startup</span>
+              BizSimpl
             </span>
           </Link>
 
