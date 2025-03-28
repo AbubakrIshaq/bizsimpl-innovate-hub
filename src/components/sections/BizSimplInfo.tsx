@@ -1,6 +1,10 @@
+
 import React, { useEffect, useRef } from 'react';
+import { User, Clock, Award, MapPin } from 'lucide-react';
+
 const BizSimplInfo = () => {
   const infoRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -11,10 +15,13 @@ const BizSimplInfo = () => {
     }, {
       threshold: 0.1
     });
+    
     const elements = infoRef.current?.querySelectorAll('.reveal');
     elements?.forEach(el => observer.observe(el));
+    
     return () => elements?.forEach(el => observer.unobserve(el));
   }, []);
+  
   return <section ref={infoRef} id="about" className="bg-white py-20">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-16 items-start">
@@ -32,7 +39,7 @@ const BizSimplInfo = () => {
           
           {/* Right column - Stats */}
           <div className="reveal lg:col-span-6 mt-8 lg:mt-0">
-            <div className="grid grid-cols-3 gap-x-8">
+            <div className="grid grid-cols-3 grid-rows-2 gap-8">
               <div className="text-center">
                 <h3 className="text-5xl font-bold text-blue-500 mb-2">400+</h3>
                 <p className="text-gray-500 text-sm">Businesses trust us</p>
@@ -47,10 +54,23 @@ const BizSimplInfo = () => {
                 <h3 className="text-5xl font-bold text-blue-500 mb-2">10+</h3>
                 <p className="text-gray-500 text-sm">Years Of Experience</p>
               </div>
+              
+              {/* New Stat 1 */}
+              <div className="text-center">
+                <h3 className="text-5xl font-bold text-blue-500 mb-2">50+</h3>
+                <p className="text-gray-500 text-sm">Expert Consultants</p>
+              </div>
+              
+              {/* New Stat 2 */}
+              <div className="text-center">
+                <h3 className="text-5xl font-bold text-blue-500 mb-2">25+</h3>
+                <p className="text-gray-500 text-sm">States Covered</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>;
 };
+
 export default BizSimplInfo;
