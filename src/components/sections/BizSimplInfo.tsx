@@ -1,9 +1,6 @@
-
 import React, { useEffect, useRef } from 'react';
-
 const BizSimplInfo = () => {
   const infoRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -14,20 +11,16 @@ const BizSimplInfo = () => {
     }, {
       threshold: 0.1
     });
-
     const elements = infoRef.current?.querySelectorAll('.reveal');
     elements?.forEach(el => observer.observe(el));
-
     return () => elements?.forEach(el => observer.unobserve(el));
   }, []);
-
-  return (
-    <section ref={infoRef} id="about" className="bg-white py-20">
+  return <section ref={infoRef} id="about" className="bg-white py-20">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-16 items-start">
           {/* Left column - What is BizSimpl Startup */}
           <div className="reveal lg:col-span-6">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="font-bold mb-6 text-3xl">
               <span className="text-gray-800">What is </span>
               <span className="text-purple-700">BizSimpl Startup?</span>
             </h2>
@@ -58,8 +51,6 @@ const BizSimplInfo = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default BizSimplInfo;
