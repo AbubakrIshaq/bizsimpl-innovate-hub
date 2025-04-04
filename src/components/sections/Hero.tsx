@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CustomButton } from '../ui/CustomButton';
@@ -43,7 +44,7 @@ const Hero = () => {
   }, []);
   
   const handleGetStarted = () => {
-    navigate('/pricing');
+    navigate('/registration');
   };
   
   return (

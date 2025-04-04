@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer';
 import { 
   Clock, DollarSign, ShieldCheck, BadgeCheck, 
   Zap, HeartHandshake, BarChart, FileCheck, 
-  CloudOff, UserPlus
+  CloudOff, UserPlus, Building, Globe, Headset, MapPin, User
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -110,6 +110,31 @@ const Benefits = () => {
       traditional: "Limited expert access",
       bizsimpl: "Dedicated support team",
       icon: <BadgeCheck className="h-5 w-5 text-purple-700" />
+    },
+    {
+      traditional: "No bank account assistance",
+      bizsimpl: "Bank account opening assistance",
+      icon: <Building className="h-5 w-5 text-purple-700" />
+    },
+    {
+      traditional: "Local incorporation only",
+      bizsimpl: "Global Inc Assistance",
+      icon: <Globe className="h-5 w-5 text-purple-700" />
+    },
+    {
+      traditional: "Multiple points of contact",
+      bizsimpl: "Single POC",
+      icon: <Headset className="h-5 w-5 text-purple-700" />
+    },
+    {
+      traditional: "Physical office address required",
+      bizsimpl: "Virtual office address",
+      icon: <MapPin className="h-5 w-5 text-purple-700" />
+    },
+    {
+      traditional: "Generic advice",
+      bizsimpl: "Personalised guidance",
+      icon: <User className="h-5 w-5 text-purple-700" />
     }
   ];
 
