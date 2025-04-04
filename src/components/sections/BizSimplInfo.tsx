@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { User, Clock, Award, MapPin, CheckCircle } from 'lucide-react';
 const BizSimplInfo = () => {
@@ -35,7 +36,7 @@ const BizSimplInfo = () => {
           <div className="reveal lg:col-span-6 mt-8 lg:mt-0">
             <div className="grid grid-cols-3 grid-rows-2 gap-8">
               <div className="text-center">
-                <h3 className="text-5xl font-bold mb-2 text-purple-700">400+</h3>
+                <h3 className="text-5xl font-bold mb-2 text-purple-700">1000+</h3>
                 <p className="text-gray-500 text-sm">Businesses trust us</p>
               </div>
               

@@ -12,21 +12,21 @@ const PrivateLimited = () => {
       
       <main className="flex-grow pt-24">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-primary to-primary/90 text-white py-16 md:py-24">
+        <section className="bg-gradient-to-r from-purple-100 to-purple-200 text-gray-800 py-16 md:py-24">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                   Private Limited Company Registration Online
                 </h1>
-                <p className="text-lg mb-8 text-white/90">
+                <p className="text-lg mb-8 text-gray-600">
                   Register your Private Limited Company in just a few steps. Get expert assistance and complete documentation.
                 </p>
-                <Button className="text-primary bg-white hover:bg-white/90 rounded-full px-8 py-6 font-medium text-base">
+                <Button className="text-white bg-primary hover:bg-primary/90 rounded-full px-8 py-6 font-medium text-base">
                   Get Started Now
                 </Button>
               </div>
-              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+              <div className="bg-white/80 p-6 rounded-lg shadow-md backdrop-blur-sm">
                 <h3 className="text-xl font-semibold mb-4">Starting at just ₹4,999</h3>
                 <ul className="space-y-3">
                   {[
@@ -38,7 +38,7 @@ const PrivateLimited = () => {
                     'Bank Account Opening Assistance'
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 mr-2 flex-shrink-0 text-white" />
+                      <CheckCircle className="h-5 w-5 mr-2 flex-shrink-0 text-secondary" />
                       <span>{item}</span>
                     </li>
                   ))}
