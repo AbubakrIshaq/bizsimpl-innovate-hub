@@ -27,7 +27,7 @@ const Registration = () => {
               <div className="lg:col-span-3">
                 <div className="bg-purple-700/30 p-4 rounded-xl border border-purple-700/30 w-full max-w-[280px] mx-auto">
                   <img 
-                    src="/lovable-uploads/d1b00ede-965e-4fcf-b016-413cd0a0226e.png" 
+                    src="/lovable-uploads/051e2548-4bbb-4069-b4c9-2f871b3c1655.png" 
                     alt="Private Limited Company" 
                     className="w-full h-auto"
                   />
@@ -60,7 +60,7 @@ const Registration = () => {
               <div className="lg:col-span-3">
                 <div className="bg-purple-700/30 p-4 rounded-xl border border-purple-700/30 w-full max-w-[280px] mx-auto">
                   <img 
-                    src="/lovable-uploads/bfce4be7-7326-43ae-a755-ea71ef79c722.png" 
+                    src="/lovable-uploads/231cf3b2-1334-4734-9893-7ff54723e583.png" 
                     alt="Limited Liability Partnership" 
                     className="w-full h-auto"
                   />
@@ -93,7 +93,7 @@ const Registration = () => {
               <div className="lg:col-span-3">
                 <div className="bg-purple-700/30 p-4 rounded-xl border border-purple-700/30 w-full max-w-[280px] mx-auto">
                   <img 
-                    src="/lovable-uploads/c15cfb9d-cb75-4ae2-8f1e-47b1eee69675.png" 
+                    src="/lovable-uploads/9f67c697-0f3e-4b8a-82d2-114f236c1c28.png" 
                     alt="One Person Company" 
                     className="w-full h-auto rounded-md"
                   />
