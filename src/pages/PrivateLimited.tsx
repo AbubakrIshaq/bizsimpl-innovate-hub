@@ -26,7 +26,7 @@ const PrivateLimited = () => {
                   Get Started Now
                 </Button>
               </div>
-              <div className="bg-white/80 p-6 rounded-lg shadow-md backdrop-blur-sm">
+              <div className="bg-[#df73ff]/20 p-6 rounded-lg shadow-md backdrop-blur-sm">
                 <h3 className="text-xl font-semibold mb-4">Starting at just ₹4,999</h3>
                 <ul className="space-y-3">
                   {[

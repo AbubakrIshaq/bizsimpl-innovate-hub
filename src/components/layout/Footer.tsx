@@ -52,7 +52,7 @@ const Footer = () => {
             <div className="text-gray-600 mb-6 max-w-md">
               <p className="mb-6 font-bold text-base">Head Office Address</p>
               <p className="mb-6">Indiqube Penta, 32, Shanthala Nagar, Richmond Town, Bengaluru, Karnataka 560025.</p>
-              <p className="text-sm text-gray-500">CIN NO : U74999KA2022PTC168801</p>
+              <p className="text-sm text-gray-500 font-medium">CIN NO : U74999KA2022PTC168801</p>
             </div>
             <div className="space-y-3">
               <p className="text-sm text-gray-500">
