@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const LLP = () => {
   return (
@@ -22,9 +23,11 @@ const LLP = () => {
                 <p className="text-lg mb-8 text-white/90">
                   Register your LLP with ease. Get all the benefits of a partnership with limited liability protection.
                 </p>
-                <Button className="text-secondary bg-white hover:bg-white/90 rounded-full px-8 py-6 font-medium text-base">
-                  Register LLP Now
-                </Button>
+                <Link to="/registration">
+                  <Button className="text-secondary bg-white hover:bg-white/90 rounded-full px-8 py-6 font-medium text-base">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
               <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
                 <h3 className="text-xl font-semibold mb-4">Starting at just ₹6,999</h3>

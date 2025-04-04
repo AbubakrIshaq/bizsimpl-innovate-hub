@@ -4,36 +4,34 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const OnePersonCompany = () => {
-  const handleRegister = () => {
-    window.location.href = "https://accounts.razorpay.com/auth/?redirecturl=https%3A%2F%2Feasy.razorpay.com%2Frize%2Fincorporation%2Fonboarding%3Fvisitor_id%3D601a54dd81d8e--1f62992176b2e%26utm_source%3Ddirect%26utm_medium%3Dwebsite%26section_source%3Dnavbar&product=rize_incorporation";
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-grow pt-24">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-24">
+        <section className="bg-[#9b87f5]/20 text-gray-800 py-16 md:py-24">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                   One Person Company Registration
                 </h1>
-                <p className="text-lg mb-8 text-white/90">
+                <p className="text-lg mb-8 text-gray-600">
                   Start your solo business journey with limited liability protection. Register your OPC today.
                 </p>
-                <Button 
-                  className="text-primary bg-white hover:bg-white/90 rounded-full px-8 py-6 font-medium text-base"
-                  onClick={handleRegister}
-                >
-                  Start Registration
-                </Button>
+                <Link to="/registration">
+                  <Button 
+                    className="text-white bg-[#9b87f5] hover:bg-[#9b87f5]/90 rounded-full px-8 py-6 font-medium text-base"
+                  >
+                    Get Started
+                  </Button>
+                </Link>
               </div>
-              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+              <div className="bg-[#9b87f5]/20 p-6 rounded-lg backdrop-blur-sm">
                 <h3 className="text-xl font-semibold mb-4">Starting at just ₹7,999</h3>
                 <ul className="space-y-3">
                   {[
@@ -45,7 +43,7 @@ const OnePersonCompany = () => {
                     'Bank Account Opening Assistance'
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 mr-2 flex-shrink-0 text-white" />
+                      <CheckCircle className="h-5 w-5 mr-2 flex-shrink-0 text-[#9b87f5]" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -78,7 +76,7 @@ const OnePersonCompany = () => {
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                  <div className="text-secondary text-2xl font-bold mb-3">{item.step}</div>
+                  <div className="text-[#9b87f5] text-2xl font-bold mb-3">{item.step}</div>
                   <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                   <p className="text-gray-600">{item.desc}</p>
                 </div>
@@ -101,7 +99,7 @@ const OnePersonCompany = () => {
                 'Fewer Compliance Requirements'
               ].map((benefit, index) => (
                 <div key={index} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 mr-3 text-secondary flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 mr-3 text-[#9b87f5] flex-shrink-0" />
                   <p className="font-medium">{benefit}</p>
                 </div>
               ))}

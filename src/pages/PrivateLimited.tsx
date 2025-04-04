@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const PrivateLimited = () => {
   return (
@@ -22,9 +23,11 @@ const PrivateLimited = () => {
                 <p className="text-lg mb-8 text-gray-600">
                   Register your Private Limited Company in just a few steps. Get expert assistance and complete documentation.
                 </p>
-                <Button className="text-white bg-[#df73ff] hover:bg-[#df73ff]/90 rounded-full px-8 py-6 font-medium text-base">
-                  Get Started Now
-                </Button>
+                <Link to="/registration">
+                  <Button className="text-white bg-[#df73ff] hover:bg-[#df73ff]/90 rounded-full px-8 py-6 font-medium text-base">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
               <div className="bg-[#df73ff]/20 p-6 rounded-lg shadow-md backdrop-blur-sm">
                 <h3 className="text-xl font-semibold mb-4">Starting at just ₹4,999</h3>
