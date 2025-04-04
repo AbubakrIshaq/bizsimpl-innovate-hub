@@ -12,7 +12,7 @@ const PrivateLimited = () => {
       
       <main className="flex-grow pt-24">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-purple-100 to-purple-200 text-gray-800 py-16 md:py-24">
+        <section className="bg-[#df73ff]/20 text-gray-800 py-16 md:py-24">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
@@ -22,7 +22,7 @@ const PrivateLimited = () => {
                 <p className="text-lg mb-8 text-gray-600">
                   Register your Private Limited Company in just a few steps. Get expert assistance and complete documentation.
                 </p>
-                <Button className="text-white bg-primary hover:bg-primary/90 rounded-full px-8 py-6 font-medium text-base">
+                <Button className="text-white bg-[#df73ff] hover:bg-[#df73ff]/90 rounded-full px-8 py-6 font-medium text-base">
                   Get Started Now
                 </Button>
               </div>
@@ -38,7 +38,7 @@ const PrivateLimited = () => {
                     'Bank Account Opening Assistance'
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 mr-2 flex-shrink-0 text-secondary" />
+                      <CheckCircle className="h-5 w-5 mr-2 flex-shrink-0 text-[#df73ff]" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -71,7 +71,7 @@ const PrivateLimited = () => {
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                  <div className="text-secondary text-2xl font-bold mb-3">{item.step}</div>
+                  <div className="text-[#df73ff] text-2xl font-bold mb-3">{item.step}</div>
                   <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                   <p className="text-gray-600">{item.desc}</p>
                 </div>
@@ -94,7 +94,7 @@ const PrivateLimited = () => {
                 'Better Funding Opportunities'
               ].map((benefit, index) => (
                 <div key={index} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 mr-3 text-secondary flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 mr-3 text-[#df73ff] flex-shrink-0" />
                   <p className="font-medium">{benefit}</p>
                 </div>
               ))}
