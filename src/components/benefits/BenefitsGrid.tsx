@@ -1,11 +1,11 @@
 
 import React, { useRef } from 'react';
-import { motion } from 'framer-motion';
 import { 
   Clock, DollarSign, ShieldCheck, BadgeCheck, 
   Zap, HeartHandshake, BarChart, FileCheck, 
   CloudOff, UserPlus
 } from 'lucide-react';
+import BenefitCard from './BenefitCard';
 
 interface BenefitItem {
   icon: React.ReactNode;
@@ -96,22 +96,14 @@ const BenefitsGrid = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {benefits.map((benefit, index) => (
-            <motion.div
+            <BenefitCard
               key={index}
-              className="rounded-xl overflow-hidden shadow-md transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: benefit.delay }}
-            >
-              <div className={`p-6 bg-gradient-to-r ${benefit.color}`}>
-                <div className="bg-white/20 p-3 rounded-full inline-block mb-4">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                <p className="text-white/90 text-sm">{benefit.description}</p>
-              </div>
-            </motion.div>
+              icon={benefit.icon}
+              title={benefit.title}
+              description={benefit.description}
+              color={benefit.color}
+              delay={benefit.delay}
+            />
           ))}
         </div>
       </div>
