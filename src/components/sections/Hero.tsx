@@ -5,23 +5,29 @@ import { CustomButton } from '../ui/CustomButton';
 import { ArrowRight } from 'lucide-react';
 
 const companyLogos = [{
-  name: 'Facebook',
-  logo: '/logos/facebook.svg'
+  name: 'Aad Square Tech Solutions',
+  logo: '/lovable-uploads/77204ec6-0e35-4495-8f8d-f3fbea08e9d7.png'
 }, {
-  name: 'Netflix',
-  logo: '/logos/netflix.svg'
+  name: 'Overhunk\'d Media House',
+  logo: '/lovable-uploads/a8cdd939-0e20-4d0a-9d40-35dae16a7975.png'
 }, {
-  name: 'Uber',
-  logo: '/logos/uber.svg'
+  name: 'High Function',
+  logo: '/lovable-uploads/81c8571f-eb4a-46ab-b543-a3d08be69a03.png'
 }, {
-  name: 'Airbnb',
-  logo: '/logos/airbnb.svg'
+  name: 'Chanaya India Private Limited',
+  logo: '/lovable-uploads/d1b00ede-965e-4fcf-b016-413cd0a0226e.png'
 }, {
-  name: 'Slack',
-  logo: '/logos/slack.svg'
+  name: 'Nolojik',
+  logo: '/lovable-uploads/54d60a92-cbc1-4b11-8e7c-e6b030269da3.png'
 }, {
-  name: 'Dropbox',
-  logo: '/logos/dropbox.svg'
+  name: 'Capup',
+  logo: '/lovable-uploads/bfce4be7-7326-43ae-a755-ea71ef79c722.png'
+}, {
+  name: 'Brighton Decor',
+  logo: '/lovable-uploads/c15cfb9d-cb75-4ae2-8f1e-47b1eee69675.png'
+}, {
+  name: 'Jobshine Solutions',
+  logo: '/lovable-uploads/d530b83d-ff18-460a-99b6-2efd2e93c91d.png'
 }];
 
 const Hero = () => {
@@ -84,16 +90,18 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Wider company logo carousel with reduced padding/spacing */}
+      {/* Company logo carousel with actual company logos */}
       <div className="reveal w-full mt-auto">
         <p className="font-bold text-gray-900 mb-1 text-center text-3xl py-[15px]">Trusted by innovative businesses</p>
         <div className="w-full max-w-6xl mx-auto overflow-hidden py-2">
           <div className="logo-scroll py-[20px]">
-            {[...companyLogos, ...companyLogos, ...companyLogos].map((company, index) => (
+            {[...companyLogos, ...companyLogos].map((company, index) => (
               <div key={index} className="logo-item mx-6">
-                <div className="h-5 px-3 bg-purple-100/70 rounded-md flex items-center justify-center text-xs text-purple-700 font-medium">
-                  {company.name}
-                </div>
+                <img 
+                  src={company.logo} 
+                  alt={company.name} 
+                  className="h-8 object-contain"
+                />
               </div>
             ))}
           </div>
