@@ -9,7 +9,7 @@ const Registration = () => {
           {/* Header */}
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-white">Hassle-free </span>
+              <span className="text-white">Get guided support from industry professionals for seamless company setup transparent pricing with no hidden charges.</span>
               <span className="text-white">Company Registrations</span>
             </h2>
             <p className="text-xl text-white/80">
