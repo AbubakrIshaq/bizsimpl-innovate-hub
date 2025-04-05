@@ -1,17 +1,28 @@
+
 import React from 'react';
 import { CustomButton } from '../ui/CustomButton';
 import { CustomCard } from '../ui/CustomCard';
 import { Link } from 'react-router-dom';
+import { useIsMobile } from '@/hooks/use-mobile';
+
 const Registration = () => {
+  const isMobile = useIsMobile();
+
   return <section id="registration" className="py-20 bg-purple-800 text-white">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-white">Get guided support from industry professionals for seamless company setup transparent pricing with no hidden charges.</span>
-              <span className="text-white">Company Registrations</span>
+              <span className="text-white">
+                {isMobile 
+                  ? "Expert business setup with transparent pricing" 
+                  : "Get guided support from industry professionals for seamless company setup transparent pricing with no hidden charges."}
+              </span>
             </h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Expert-Led Business Registration Consulting
+            </h3>
             <p className="text-xl text-white/80">
               Choose from the most popular company types and get seamless registration at No Hidden Charges
             </p>
