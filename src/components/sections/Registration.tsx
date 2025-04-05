@@ -17,7 +17,7 @@ const Registration = () => {
               <span className="text-white">
                 {isMobile 
                   ? "Expert business setup with transparent pricing" 
-                  : "Get guided support from industry professionals for seamless company setup transparent pricing with no hidden charges."}
+                  : ""}
               </span>
             </h2>
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
