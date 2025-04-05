@@ -41,7 +41,7 @@ const Registration = () => {
                 </h3>
               </div>
               <div className="lg:col-span-3">
-                <p className="text-sm md:text-base text-white/80">Ideal for startups and growth-focused businesses aiming to scale. We assist in setting up a Pvt Ltd structure that enables fund-raising, team expansion and ensures investor readiness from day one.</p>
+                <p className="text-sm md:text-base text-white/80">Structured for growth-ready businesses. Enables fund-raising, ESOPs, and investor confidence with our expert-led registration support.</p>
               </div>
               <div className="lg:col-span-2 flex justify-center lg:justify-end">
                 <Link to="/private-limited">
@@ -65,7 +65,7 @@ const Registration = () => {
                 </h3>
               </div>
               <div className="lg:col-span-3">
-                <p className="text-sm md:text-base text-white/80">Perfect for consulting firms and service providers looking for a flexible structure. Our experts guide you through establishing an LLP that combines operational freedom with limited liability and minimal compliance burden.
+                <p className="text-sm md:text-base text-white/80">Ideal for service-based firms. Offers limited liability with minimal compliance—efficiently set up by our consultants.
               </p>
               </div>
               <div className="lg:col-span-2 flex justify-center lg:justify-end">
