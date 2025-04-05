@@ -13,17 +13,15 @@ const Registration = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-white">
-                {isMobile 
-                  ? "Expert business setup with transparent pricing" 
-                  : ""}
-              </span>
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Expert-Led Business Registration Consulting
             </h3>
-            <p className="text-xl text-white/80">
+            <span className="text-xl md:text-2xl text-white">
+              {isMobile 
+                ? "Expert business setup with transparent pricing" 
+                : ""}
+            </span>
+            <p className="text-xl text-white/80 mt-4">
               Choose from the most popular company types and get seamless registration at No Hidden Charges
             </p>
           </div>
