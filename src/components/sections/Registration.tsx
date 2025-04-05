@@ -13,15 +13,15 @@ const Registration = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-16">
-            <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Expert-Led Business Registration Consulting
             </h3>
             {isMobile && (
-              <span className="text-base md:text-2xl text-white block mb-3">
+              <span className="text-xl md:text-2xl text-white block mb-3">
                 Expert business setup with transparent pricing
               </span>
             )}
-            <p className="text-sm md:text-xl text-white/80 mt-2 md:mt-4">
+            <p className="text-base md:text-xl text-white/80 mt-2 md:mt-4">
               Choose from the most popular company types and get seamless registration at No Hidden Charges
             </p>
           </div>
@@ -36,12 +36,12 @@ const Registration = () => {
                 </div>
               </div>
               <div className="lg:col-span-4">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                <h3 className="text-3xl md:text-3xl font-bold mb-2">
                   Private Limited <br />Company
                 </h3>
               </div>
               <div className="lg:col-span-3">
-                <p className="text-sm md:text-base text-white/80">Structured for growth-ready businesses. Enables fund-raising, ESOPs, and investor confidence with our expert-led registration support.</p>
+                <p className="text-base md:text-base text-white/80">Structured for growth-ready businesses. Enables fund-raising, ESOPs, and investor confidence with our expert-led registration support.</p>
               </div>
               <div className="lg:col-span-2 flex justify-center lg:justify-end">
                 <Link to="/private-limited">
@@ -60,12 +60,12 @@ const Registration = () => {
                 </div>
               </div>
               <div className="lg:col-span-4">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                <h3 className="text-3xl md:text-3xl font-bold mb-2">
                   Limited Liability <br />Partnership
                 </h3>
               </div>
               <div className="lg:col-span-3">
-                <p className="text-sm md:text-base text-white/80">Ideal for service-based firms. Offers limited liability with minimal compliance—efficiently set up by our consultants.
+                <p className="text-base md:text-base text-white/80">Ideal for service-based firms. Offers limited liability with minimal compliance—efficiently set up by our consultants.
               </p>
               </div>
               <div className="lg:col-span-2 flex justify-center lg:justify-end">
@@ -85,12 +85,12 @@ const Registration = () => {
                 </div>
               </div>
               <div className="lg:col-span-4">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                <h3 className="text-3xl md:text-3xl font-bold mb-2">
                   One Person <br />Company
                 </h3>
               </div>
               <div className="lg:col-span-3">
-                <p className="text-sm md:text-base text-white/80">Best suited for solo entrepreneurs and franchise operators. We offer tailored support to help you register an OPC that delivers full control, limited liability, and a formal business identity all with minimal complexity.</p>
+                <p className="text-base md:text-base text-white/80">Best suited for solo entrepreneurs and franchise operators. We offer tailored support to help you register an OPC that delivers full control, limited liability, and a formal business identity all with minimal complexity.</p>
               </div>
               <div className="lg:col-span-2 flex justify-center lg:justify-end">
                 <Link to="/one-person-company">
