@@ -29,25 +29,25 @@ const Registration = () => {
           {/* Company Types Grid */}
           <div className="space-y-10">
             {/* Private Limited Company */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-              <div className="lg:col-span-3">
-                <div className="bg-white rounded-xl p-4 w-full mx-auto flex justify-center items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+              {/* <div className="lg:col-span-3"> */}
+                <div className="bg-white rounded-xl h-36 p-1 w-full mx-auto flex justify-center items-center">
                   <img 
                     src="/lovable-uploads/761edb13-9d1a-4a38-a3ae-63ade83dabc1.png" 
                     alt="Private Limited Company" 
-                    className="h-24 w-auto object-contain" 
+                    className="h-32 w-40 object-cover object-[25%_11%]" 
                   />
                 </div>
-              </div>
-              <div className="lg:col-span-4">
+              {/* </div> */}
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-2">
                   Private Limited <br />Company
                 </h3>
               </div>
-              <div className="lg:col-span-3">
+              <div>
                 <p className="text-sm md:text-base text-white/80">Structured for growth-ready businesses. Enables fund-raising, ESOPs, and investor confidence with our expert-led registration support.</p>
               </div>
-              <div className="lg:col-span-2 flex justify-center lg:justify-end">
+              <div className="flex justify-center lg:justify-end">
                 <Link to="/private-limited">
                   <CustomButton variant="outline" className="bg-white text-purple-700 hover:bg-white/90 border-white whitespace-nowrap">
                     Learn More
@@ -57,26 +57,26 @@ const Registration = () => {
             </div>
 
             {/* Limited Liability Partnership */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-              <div className="lg:col-span-3">
-                <div className="bg-white rounded-xl p-4 w-full mx-auto flex justify-center items-center">
-                  <img 
-                    src="/lovable-uploads/9edeb2b9-aea4-4762-9204-c15ffd5c0192.png" 
-                    alt="Limited Liability Partnership" 
-                    className="h-24 w-auto object-contain" 
-                  />
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+              {/* <div className="lg:col-span-3"> */}
+                <div className="bg-white rounded-xl h-36 p-1 w-full mx-auto flex justify-center items-center">
+              <img 
+                src="/lovable-uploads/9edeb2b9-aea4-4762-9204-c15ffd5c0192.png" 
+                alt="Limited Liability Partnership" 
+                className="h-32 w-40 object-cover object-[25%_11%]" 
+              />
                 </div>
-              </div>
-              <div className="lg:col-span-4">
+              {/* </div> */}
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-2">
                   Limited Liability <br />Partnership
                 </h3>
               </div>
-              <div className="lg:col-span-3">
+              <div>
                 <p className="text-sm md:text-base text-white/80">Ideal for service-based firms. Offers limited liability with minimal compliance—efficiently set up by our consultants.
               </p>
               </div>
-              <div className="lg:col-span-2 flex justify-center lg:justify-end">
+              <div className="flex justify-center lg:justify-end">
                 <Link to="/llp">
                   <CustomButton variant="outline" className="bg-white text-purple-700 hover:bg-white/90 border-white whitespace-nowrap">
                     Learn More
@@ -86,25 +86,25 @@ const Registration = () => {
             </div>
 
             {/* One Person Company */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-              <div className="lg:col-span-3">
-                <div className="bg-white rounded-xl p-4 w-full mx-auto flex justify-center items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+              {/* <div className="lg:col-span-3"> */}
+                <div className="bg-white rounded-xl h-36 p-1 w-full mx-auto flex justify-center items-center">
                   <img 
-                    src="/lovable-uploads/ebdab9ca-9dd1-429b-89af-3f26f655cf7f.png" 
+                    src="/lovable-uploads/One_Person_Company.png" 
                     alt="One Person Company" 
-                    className="h-24 w-auto object-contain" 
+                    className="h-32 w-40 object-cover object-[11%_11%]" 
                   />
                 </div>
-              </div>
-              <div className="lg:col-span-4">
+              {/* </div> */}
+              <div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-2">
                   One Person <br />Company
                 </h3>
               </div>
-              <div className="lg:col-span-3">
-                <p className="text-sm md:text-base text-white/80">Best suited for solo entrepreneurs and franchise operators. We offer tailored support to help you register an OPC that delivers full control, limited liability, and a formal business identity all with minimal complexity.</p>
+              <div>
+                <p className="text-sm md:text-base text-white/80">Perfect for solo consultants and franchise owners. Gain limited liability and a structured business identity with ease.</p>
               </div>
-              <div className="lg:col-span-2 flex justify-center lg:justify-end">
+              <div className="flex justify-center lg:justify-end">
                 <Link to="/one-person-company">
                   <CustomButton variant="outline" className="bg-white text-purple-700 hover:bg-white/90 border-white whitespace-nowrap">
                     Learn More
