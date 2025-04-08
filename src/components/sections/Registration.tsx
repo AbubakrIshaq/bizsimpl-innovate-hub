@@ -31,8 +31,12 @@ const Registration = () => {
             {/* Private Limited Company */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-3">
-                <div className="bg-white rounded-xl p-4 w-full max-w-[280px] mx-auto">
-                  <img src="/lovable-uploads/761edb13-9d1a-4a38-a3ae-63ade83dabc1.png" alt="Private Limited Company" className="w-full h-auto" />
+                <div className="bg-white rounded-xl p-4 w-full mx-auto flex justify-center items-center">
+                  <img 
+                    src="/lovable-uploads/761edb13-9d1a-4a38-a3ae-63ade83dabc1.png" 
+                    alt="Private Limited Company" 
+                    className="h-24 w-auto object-contain" 
+                  />
                 </div>
               </div>
               <div className="lg:col-span-4">
@@ -55,8 +59,12 @@ const Registration = () => {
             {/* Limited Liability Partnership */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-3">
-                <div className="bg-white rounded-xl p-4 w-full max-w-[280px] mx-auto">
-                  <img src="/lovable-uploads/9edeb2b9-aea4-4762-9204-c15ffd5c0192.png" alt="Limited Liability Partnership" className="w-full h-auto" />
+                <div className="bg-white rounded-xl p-4 w-full mx-auto flex justify-center items-center">
+                  <img 
+                    src="/lovable-uploads/9edeb2b9-aea4-4762-9204-c15ffd5c0192.png" 
+                    alt="Limited Liability Partnership" 
+                    className="h-24 w-auto object-contain" 
+                  />
                 </div>
               </div>
               <div className="lg:col-span-4">
@@ -80,8 +88,12 @@ const Registration = () => {
             {/* One Person Company */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               <div className="lg:col-span-3">
-                <div className="bg-white rounded-xl p-4 w-full max-w-[280px] mx-auto">
-                  <img src="/lovable-uploads/ebdab9ca-9dd1-429b-89af-3f26f655cf7f.png" alt="One Person Company" className="w-full h-auto" />
+                <div className="bg-white rounded-xl p-4 w-full mx-auto flex justify-center items-center">
+                  <img 
+                    src="/lovable-uploads/ebdab9ca-9dd1-429b-89af-3f26f655cf7f.png" 
+                    alt="One Person Company" 
+                    className="h-24 w-auto object-contain" 
+                  />
                 </div>
               </div>
               <div className="lg:col-span-4">
