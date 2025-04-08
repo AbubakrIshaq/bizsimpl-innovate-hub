@@ -41,35 +41,35 @@ const BizSimplInfo = () => {
           <div className="reveal lg:col-span-6 mt-8 lg:mt-0">
             <div className="grid grid-cols-3 grid-rows-2 gap-8">
               <div className="text-center">
-                <h3 className="text-5xl font-bold mb-2 text-purple-700">1000+</h3>
+                <h3 className="text-4xl md:text-5xl font-bold mb-2 text-purple-700">1000+</h3>
                 <p className="text-xs md:text-sm text-gray-500">Businesses trust us</p>
               </div>
               
               <div className="text-center">
-                <h3 className="text-5xl font-bold mb-2 text-purple-700">500+</h3>
+                <h3 className="text-4xl md:text-5xl font-bold mb-2 text-purple-700">500+</h3>
                 <p className="text-xs md:text-sm text-gray-500">Businesses Incorporated</p>
               </div>
               
               <div className="text-center">
-                <h3 className="text-5xl font-bold mb-2 text-purple-700">10+</h3>
+                <h3 className="text-4xl md:text-5xl font-bold mb-2 text-purple-700">10+</h3>
                 <p className="text-xs md:text-sm text-gray-500">Years Of Experience</p>
               </div>
               
               {/* New Stat 1 */}
               <div className="text-center">
-                <h3 className="text-5xl font-bold mb-2 text-purple-700">50+</h3>
+                <h3 className="text-4xl md:text-5xl font-bold mb-2 text-purple-700">50+</h3>
                 <p className="text-xs md:text-sm text-gray-500">Expert Consultants</p>
               </div>
               
               {/* New Stat 2 */}
               <div className="text-center">
-                <h3 className="text-5xl font-bold mb-2 text-purple-700">12+</h3>
+                <h3 className="text-4xl md:text-5xl font-bold mb-2 text-purple-700">12+</h3>
                 <p className="text-xs md:text-sm text-gray-500">States Covered</p>
               </div>
               
               {/* New Success Rate Stat */}
               <div className="text-center">
-                <h3 className="text-5xl font-bold mb-2 text-purple-700">96%</h3>
+                <h3 className="text-4xl md:text-5xl font-bold mb-2 text-purple-700">96%</h3>
                 <p className="text-xs md:text-sm text-gray-500">Success Rate</p>
               </div>
             </div>
@@ -80,3 +80,4 @@ const BizSimplInfo = () => {
 };
 
 export default BizSimplInfo;
+
