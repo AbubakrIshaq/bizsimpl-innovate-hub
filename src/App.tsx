@@ -18,6 +18,7 @@ import AboutUs from "./pages/about/AboutUs";
 import Careers from "./pages/about/Careers";
 import Blog from "./pages/about/Blog";
 import Press from "./pages/about/Press";
+import LeadsGeneration from "./pages/LeadsGeneration";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/features" element={<Features />} />
           <Route path="/benefits" element={<Benefits />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/free-consultation" element={<LeadsGeneration />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Blog />} />
