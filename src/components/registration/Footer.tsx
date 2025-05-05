@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -7,6 +8,10 @@ const Footer = () => {
       <div className="container mx-auto">
         <p className="text-sm text-gray-600">
           © {new Date().getFullYear()} BizSimpl. All rights reserved.
+          {' | '}
+          <Link to="/free-consultation" className="text-purple-600 hover:underline">
+            Free Consultation
+          </Link>
         </p>
       </div>
     </footer>

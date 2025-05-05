@@ -20,7 +20,8 @@ const Footer = () => {
       links: [
         { name: 'Private Limited Company', href: '/private-limited' },
         { name: 'Limited Liability Partnership', href: '/llp' },
-        { name: 'One Person Company', href: '/one-person-company' }
+        { name: 'One Person Company', href: '/one-person-company' },
+        { name: 'Free Consultation', href: '/free-consultation' }
       ]
     },
     {
